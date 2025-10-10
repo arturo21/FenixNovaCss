@@ -1,0 +1,101 @@
+/* 📦 Contenedor de columnas */
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+/* 📦 Columna base */
+.column {
+  flex: 1;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  min-width: 0;
+}
+
+/* 📏 Columnas fijas por doceavos */
+.column.is-1  { flex: 0 0 8.333%;  max-width: 8.333%; }
+.column.is-2  { flex: 0 0 16.666%; max-width: 16.666%; }
+.column.is-3  { flex: 0 0 25%;     max-width: 25%; }
+.column.is-4  { flex: 0 0 33.333%; max-width: 33.333%; }
+.column.is-5  { flex: 0 0 41.666%; max-width: 41.666%; }
+.column.is-6  { flex: 0 0 50%;     max-width: 50%; }
+.column.is-7  { flex: 0 0 58.333%; max-width: 58.333%; }
+.column.is-8  { flex: 0 0 66.666%; max-width: 66.666%; }
+.column.is-9  { flex: 0 0 75%;     max-width: 75%; }
+.column.is-10 { flex: 0 0 83.333%; max-width: 83.333%; }
+.column.is-11 { flex: 0 0 91.666%; max-width: 91.666%; }
+.column.is-12 { flex: 0 0 100%;    max-width: 100%; }
+
+/* 📐 Columnas proporcionales */
+.column.is-quarter     { flex: 0 0 25%;     max-width: 25%; }
+.column.is-three-quarters { flex: 0 0 75%;  max-width: 75%; }
+
+.column.is-third       { flex: 0 0 33.333%; max-width: 33.333%; }
+.column.is-two-thirds  { flex: 0 0 66.666%; max-width: 66.666%; }
+
+.column.is-half        { flex: 0 0 50%;     max-width: 50%; }
+
+/* 📱 Breakpoints responsivos */
+@media (max-width: 768px) {
+  .column.is-mobile-full { flex: 0 0 100%; max-width: 100%; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .column.is-tablet-half { flex: 0 0 50%; max-width: 50%; }
+}
+
+@media (min-width: 1025px) {
+  .column.is-desktop-third { flex: 0 0 33.333%; max-width: 33.333%; }
+}
+
+/* 🎯 Alineación vertical */
+.columns.is-vcentered { align-items: center; }
+.columns.is-vtop      { align-items: flex-start; }
+.columns.is-vbottom   { align-items: flex-end; }
+
+/* 🎯 Alineación horizontal */
+.columns.is-centered   { justify-content: center; }
+.columns.is-right      { justify-content: flex-end; }
+.columns.is-left       { justify-content: flex-start; }
+.columns.is-spaced     { justify-content: space-between; }
+
+/* 🔄 Orden y expansión */
+.column.is-narrow { flex: none; }
+.column.is-full   { flex: 0 0 100%; max-width: 100%; }
+.column.is-hidden { display: none !important; }
+.column.is-auto   { flex: 1 1 auto; }
+
+/* 📏 Espaciado entre columnas */
+.columns.has-gap-sm .column { padding: 0.5rem; }
+.columns.has-gap-md .column { padding: 0.75rem; }
+.columns.has-gap-lg .column { padding: 1rem; }
+
+/* 🧩 Columnas anidadas */
+.column .columns {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+.column .columns .column {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+/* 🎨 Variables scoped */
+:root {
+  --fenixnova-column-gap: 0.75rem;
+}
+
+.columns {
+  margin-left: calc(-1 * var(--fenixnova-column-gap));
+  margin-right: calc(-1 * var(--fenixnova-column-gap));
+}
+
+.column {
+  padding-left: var(--fenixnova-column-gap);
+  padding-right: var(--fenixnova-column-gap);
+}

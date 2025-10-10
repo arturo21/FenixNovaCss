@@ -1,0 +1,109 @@
+/* 🎨 Mixins de espaciado */
+:root {
+  --mixin-spacing-xs: 0.25rem;
+  --mixin-spacing-sm: 0.5rem;
+  --mixin-spacing-md: 1rem;
+  --mixin-spacing-lg: 1.5rem;
+  --mixin-spacing-xl: 2rem;
+}
+
+/* 🧩 Mixins de borde */
+:root {
+  --mixin-radius-sm: 4px;
+  --mixin-radius-md: 8px;
+  --mixin-radius-lg: 12px;
+  --mixin-border-color: var(--border-color);
+}
+
+/* 🧩 Mixins de sombra */
+:root {
+  --mixin-shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --mixin-shadow-md: 0 2px 6px rgba(0,0,0,0.1);
+  --mixin-shadow-lg: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* 🧩 Mixins de transición */
+:root {
+  --mixin-transition-fast: 0.2s ease;
+  --mixin-transition-slow: 0.4s ease;
+}
+
+/* 🧩 Mixins de tipografía */
+:root {
+  --mixin-font-sm: 0.875rem;
+  --mixin-font-md: 1rem;
+  --mixin-font-lg: 1.25rem;
+  --mixin-font-bold: 700;
+  --mixin-font-light: 300;
+}
+
+/* 🧩 Mixins de layout */
+:root {
+  --mixin-grid-gap: var(--spacing-md);
+  --mixin-grid-cols: 12;
+  --mixin-flex-gap: var(--spacing-sm);
+}
+
+/* 🧩 Mixins de color */
+:root {
+  --mixin-color-primary: var(--primary);
+  --mixin-color-secondary: var(--secondary);
+  --mixin-color-success: var(--success);
+  --mixin-color-danger: var(--danger);
+  --mixin-color-warning: var(--warning);
+  --mixin-color-info: var(--info);
+  --mixin-color-light: var(--gray-light);
+  --mixin-color-dark: var(--black);
+}
+
+/* 🧩 Mixins de validación visual */
+:root {
+  --mixin-valid-color: var(--success);
+  --mixin-invalid-color: var(--danger);
+  --mixin-valid-icon: "✔";
+  --mixin-invalid-icon: "✖";
+}
+
+/* 🧩 Mixins de animación */
+@keyframes mixin-fade-in {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes mixin-scale-up {
+  from { transform: scale(0.95); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+/* 🧩 Mixins de centrado */
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-grid {
+  display: grid;
+  place-items: center;
+}
+
+/* 🧩 Mixins de iconos en campos */
+.field-valid::after {
+  content: var(--mixin-valid-icon);
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--mixin-valid-color);
+  font-size: 1rem;
+}
+
+.field-invalid::after {
+  content: var(--mixin-invalid-icon);
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--mixin-invalid-color);
+  font-size: 1rem;
+}

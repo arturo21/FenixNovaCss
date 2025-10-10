@@ -1,0 +1,152 @@
+/* 🔘 Botón base */
+.button {
+  --fenixnova-btn-bg: var(--primary);
+  --fenixnova-btn-color: #fff;
+  --fenixnova-btn-radius: var(--radius-base);
+  --fenixnova-btn-padding: 0.5rem 1rem;
+  --fenixnova-btn-font-size: 1rem;
+  --fenixnova-btn-shadow: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: var(--fenixnova-btn-padding);
+  font-size: var(--fenixnova-btn-font-size);
+  font-weight: 500;
+  border-radius: var(--fenixnova-btn-radius);
+  background-color: var(--fenixnova-btn-bg);
+  color: var(--fenixnova-btn-color);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: var(--fenixnova-btn-shadow);
+}
+
+/* 🧭 Centrado horizontal de botón individual */
+.button-center {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 🧩 Centrado horizontal de grupo de botones */
+.button-group-center {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 🎨 Variantes de color */
+.button-primary   { --fenixnova-btn-bg: var(--primary); --fenixnova-btn-color: #fff; }
+.button-secondary { --fenixnova-btn-bg: var(--secondary); --fenixnova-btn-color: #fff; }
+.button-success   { --fenixnova-btn-bg: var(--success); --fenixnova-btn-color: #fff; }
+.button-danger    { --fenixnova-btn-bg: var(--danger); --fenixnova-btn-color: #fff; }
+.button-warning   { --fenixnova-btn-bg: var(--warning); --fenixnova-btn-color: #000; }
+.button-info      { --fenixnova-btn-bg: var(--info); --fenixnova-btn-color: #fff; }
+.button-light     { --fenixnova-btn-bg: var(--gray-light); --fenixnova-btn-color: var(--text-main); }
+.button-dark      { --fenixnova-btn-bg: var(--black); --fenixnova-btn-color: #fff; }
+
+/* 📏 Tamaños */
+.button-small {
+  --fenixnova-btn-padding: 0.375rem 0.75rem;
+  --fenixnova-btn-font-size: 0.875rem;
+}
+
+.button-large {
+  --fenixnova-btn-padding: 0.75rem 1.5rem;
+  --fenixnova-btn-font-size: 1.125rem;
+}
+
+/* 🧭 Estilos alternativos */
+.button-outline {
+  background: transparent;
+  border: 2px solid var(--fenixnova-btn-bg);
+  color: var(--fenixnova-btn-bg);
+}
+
+.button-ghost {
+  background: transparent;
+  color: var(--fenixnova-btn-color);
+  border: none;
+}
+
+.button-link {
+  background: none;
+  border: none;
+  color: var(--fenixnova-btn-bg);
+  text-decoration: underline;
+  padding: 0;
+}
+
+.button-pill {
+  border-radius: 999px;
+}
+
+/* 🚫 Estado deshabilitado */
+.button:disabled,
+.button.is-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ⏳ Estado loading */
+.button.is-loading {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.8;
+  color: transparent !important;
+}
+
+.button.is-loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin: -0.5rem;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: fenixnova-spin 0.6s linear infinite;
+}
+
+@keyframes fenixnova-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 🔄 Botón con ícono */
+.button .icon {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.2em;
+}
+
+/* 🎯 Botón con badge */
+.button .badge {
+  background-color: var(--danger);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.2em 0.5em;
+  border-radius: 999px;
+  margin-left: 0.5rem;
+}
+
+/* 🧩 Grupo de botones */
+.button-group {
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+.button-group .button {
+  margin: 0;
+}

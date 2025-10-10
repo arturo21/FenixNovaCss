@@ -18,7 +18,45 @@
 
 ---
 
-## 🚀 Funciones disponibles
+## 🚀 Características principales
+
+- 🎨 Sistema de diseño tokenizado (`_fenixnova-tokens.css`)
+- 📦 Componentes visuales accesibles y responsivos (`fenixnova-components.css`)
+- 🧩 Helpers atómicos para layout, tipografía, color, visibilidad (`fenixnova-helpers.css`)
+- 🧱 Sistema de grillas flexible y proporcional (`fenixnova-grid.css`)
+- 🧠 Mixins reutilizables para estilos dinámicos (`fenixnova-mixins.css`)
+- 📝 Formularios estilizados con validación visual (`fenixnova-forms.css`)
+- 🎯 Extensiones visuales y utilitarias (`fenixnova-extend.css`)
+- 🎭 Soporte para temas (modo claro/oscuro) (`fenixnova-theme.css`)
+- ⚙️ Estados visuales condicionales (`fenixnova-helpers.css`)
+
+---
+
+## 🆕 Mejoras recientes
+
+### ✅ Sistema de chips (inspirado en Angular Material)
+- Chips básicos, seleccionables, removibles y con íconos
+- Variantes de color y layout responsivo
+- Implementado en `fenixnova-components.css`
+
+### 🎭 Soporte para temas
+- Modo claro y oscuro con tokens adaptables
+- Activación por `[data-theme="dark"]` o `.theme-dark`
+- Implementado en `fenixnova-theme.css`
+
+### ⚙️ Sistema de estados visuales
+- Clases como `.is-active`, `.is-disabled`, `.is-loading`, `.is-expanded`, `.is-collapsed`, `.is-focused`, `.is-selected`
+- Indicadores visuales y animaciones
+- Implementado en `fenixnova-helpers.css`
+
+### 🧼 Depuración y optimización
+- Eliminación de clases duplicadas y redundantes
+- Consolidación de animaciones y estados
+- Mejora de consistencia entre módulos
+
+---
+
+## 🚀 Módulos disponibles
 
 FenixNovaCss está dividido en módulos independientes que puedes importar según tus necesidades:
 

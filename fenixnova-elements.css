@@ -1,0 +1,198 @@
+/* 🎨 Variables base */
+:root {
+  --element-radius: var(--radius-base);
+  --element-padding: var(--spacing-sm);
+  --element-border: 1px solid var(--border-color);
+  --element-bg: var(--bg-surface);
+  --element-color: var(--text-main);
+  --table-row-even: #f9f9f9;
+  --table-row-odd: #eeeeee;
+}
+
+/* 🧩 Títulos */
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-main);
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-muted);
+}
+
+/* 🧩 Texto */
+.text-muted { color: var(--text-muted); }
+.text-small { font-size: var(--font-size-small); }
+.text-large { font-size: var(--font-size-large); }
+
+/* 🧩 Imagen */
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--element-radius);
+}
+
+.image-rounded { border-radius: 999px; }
+.image-bordered { border: var(--element-border); }
+
+/* 🧩 Icono */
+.icon {
+  display: inline-block;
+  font-size: 1.25rem;
+  vertical-align: middle;
+  color: inherit;
+}
+
+.icon-lg { font-size: 1.5rem; }
+.icon-sm { font-size: 0.875rem; }
+
+/* 🧩 Etiqueta / Tag */
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: var(--element-radius);
+  background-color: var(--gray-light);
+  color: var(--text-main);
+  margin-right: 0.25rem;
+}
+
+.tag-primary   { background-color: var(--primary); color: #fff; }
+.tag-success   { background-color: var(--success); color: #fff; }
+.tag-danger    { background-color: var(--danger); color: #fff; }
+.tag-warning   { background-color: var(--warning); color: #000; }
+.tag-info      { background-color: var(--info); color: #fff; }
+
+/* 🧩 Tabla */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  border: var(--element-border);
+  text-align: left;
+}
+
+.table thead {
+  background-color: var(--gray-light);
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: var(--table-row-even);
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: var(--table-row-odd);
+}
+
+.table-hover tbody tr:hover {
+  background-color: #e0e0e0;
+}
+
+/* 🧩 Lista */
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.list-item {
+  padding: 0.5rem 0;
+  border-bottom: var(--element-border);
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+/* 🧩 Separador */
+.divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: var(--spacing-md) 0;
+}
+
+/* 🧩 Contenido */
+.content {
+  line-height: 1.6;
+  font-size: var(--font-size-base);
+  color: var(--text-main);
+}
+
+.content p {
+  margin-bottom: var(--spacing-sm);
+}
+
+.content ul,
+.content ol {
+  margin-left: 1.5rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.content h1,
+.content h2,
+.content h3 {
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* 🧩 Delete / Close */
+.delete {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--danger);
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+/* 🧩 Progress bar */
+.progress {
+  width: 100%;
+  height: 0.75rem;
+  background-color: var(--gray-light);
+  border-radius: var(--element-radius);
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--primary);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* 🧩 Badge */
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.25em 0.5em;
+  border-radius: 999px;
+  background-color: var(--danger);
+  color: #fff;
+  margin-left: 0.5rem;
+}
+
+/* 🧩 Responsive helpers */
+@media (max-width: 768px) {
+  .table th,
+  .table td {
+    padding: 0.5rem;
+  }
+
+  .title { font-size: 1.25rem; }
+  .subtitle { font-size: 1rem; }
+}

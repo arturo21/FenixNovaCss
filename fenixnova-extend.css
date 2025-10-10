@@ -1,0 +1,133 @@
+/* 🎨 Variables extendidas */
+:root {
+  --extend-transition-fast: 0.2s ease;
+  --extend-transition-slow: 0.4s ease;
+  --extend-scale-hover: 1.03;
+  --extend-opacity-disabled: 0.6;
+  --extend-blur-bg: blur(6px);
+}
+
+/* 🧩 Helpers de espaciado */
+.mt-0  { margin-top: 0; }
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+
+.mb-0  { margin-bottom: 0; }
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+
+.p-0   { padding: 0; }
+.p-sm  { padding: var(--spacing-sm); }
+.p-md  { padding: var(--spacing-md); }
+.p-lg  { padding: var(--spacing-lg); }
+
+/* 🧩 Helpers de alineación */
+.text-center   { text-align: center; }
+.text-left     { text-align: left; }
+.text-right    { text-align: right; }
+.align-center  { align-items: center; }
+.justify-center{ justify-content: center; }
+
+/* 🧩 Helpers de visibilidad */
+.is-hidden     { display: none !important; }
+.is-visible    { display: block !important; }
+.is-invisible  { visibility: hidden; }
+.is-disabled   { opacity: var(--extend-opacity-disabled); pointer-events: none; }
+
+/* 🧩 Helpers de display */
+.d-block       { display: block; }
+.d-inline      { display: inline; }
+.d-inline-block{ display: inline-block; }
+.d-flex        { display: flex; }
+.d-grid        { display: grid; }
+
+/* 🧩 Helpers de tamaño */
+.w-full        { width: 100%; }
+.h-full        { height: 100%; }
+.max-w-screen  { max-width: 100vw; }
+.max-h-screen  { max-height: 100vh; }
+
+/* 🧩 Helpers de borde y sombra */
+.rounded       { border-radius: var(--radius-base); }
+.rounded-lg    { border-radius: var(--radius-lg); }
+.shadow        { box-shadow: var(--shadow-base); }
+.shadow-lg     { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+
+/* 🧩 Helpers de color */
+.bg-primary    { background-color: var(--primary); color: #fff; }
+.bg-secondary  { background-color: var(--secondary); color: #fff; }
+.bg-light      { background-color: var(--gray-light); color: var(--text-main); }
+.bg-dark       { background-color: var(--black); color: #fff; }
+.bg-transparent{ background-color: transparent; }
+
+.text-primary  { color: var(--primary); }
+.text-muted    { color: var(--text-muted); }
+.text-success  { color: var(--success); }
+.text-danger   { color: var(--danger); }
+
+/* 🧩 Helpers de transición y animación */
+.transition-fast { transition: all var(--extend-transition-fast); }
+.transition-slow { transition: all var(--extend-transition-slow); }
+
+.scale-hover {
+  transition: transform var(--extend-transition-fast);
+}
+.scale-hover:hover {
+  transform: scale(var(--extend-scale-hover));
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* 🧩 Helpers de fondo borroso */
+.backdrop-blur {
+  backdrop-filter: var(--extend-blur-bg);
+  -webkit-backdrop-filter: var(--extend-blur-bg);
+}
+
+/* 🧩 Helpers de posición */
+.position-relative { position: relative; }
+.position-absolute { position: absolute; }
+.position-fixed    { position: fixed; }
+.top-0    { top: 0; }
+.bottom-0 { bottom: 0; }
+.left-0   { left: 0; }
+.right-0  { right: 0; }
+
+/* 🧩 Helpers de scroll */
+.scroll-y { overflow-y: auto; }
+.scroll-x { overflow-x: auto; }
+.no-scroll { overflow: hidden; }
+
+/* 🧩 Helpers de z-index */
+.z-0  { z-index: 0; }
+.z-10 { z-index: 10; }
+.z-50 { z-index: 50; }
+.z-100{ z-index: 100; }
+
+/* 🧩 Helpers de cursor */
+.cursor-pointer { cursor: pointer; }
+.cursor-default { cursor: default; }
+.cursor-not-allowed { cursor: not-allowed; }
+
+/* 🧩 Helpers de flex */
+.flex-wrap     { flex-wrap: wrap; }
+.flex-nowrap   { flex-wrap: nowrap; }
+.flex-column   { flex-direction: column; }
+.flex-row      { flex-direction: row; }
+.flex-center   { justify-content: center; align-items: center; }
+
+/* 🧩 Helpers de grid */
+.grid-cols-2   { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3   { grid-template-columns: repeat(3, 1fr); }
+.grid-cols-4   { grid-template-columns: repeat(4, 1fr); }
+.grid-gap-sm   { gap: var(--spacing-sm); }
+.grid-gap-md   { gap: var(--spacing-md); }
+.grid-gap-lg   { gap: var(--spacing-lg); }
