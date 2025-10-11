@@ -1,0 +1,82 @@
+/* 🌐 Reset universal */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🧱 Elementos base */
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+  line-height: var(--line-height-md);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 🧩 Tipografía */
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, li,
+blockquote, figure {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+}
+
+/* 🔗 Enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 🧩 Listas */
+ul, ol {
+  list-style: none;
+}
+
+/* 🧩 Imágenes */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 🧩 Formularios */
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* 🧩 Botones */
+button {
+  cursor: pointer;
+}
+
+/* 🧩 Tablas */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* 🧩 Código */
+code, pre {
+  font-family: monospace;
+  font-size: var(--font-size-sm);
+}
+
+/* 🧩 Accesibilidad */
+[hidden] {
+  display: none !important;
+}

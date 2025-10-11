@@ -1,0 +1,90 @@
+/* 🧱 Contenedor principal */
+.container {
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  width: 100%;
+}
+
+/* 🧱 Sección */
+.section {
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+}
+
+/* 📐 Columnas flexibles */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.col {
+  flex: 1 1 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.col-1  { flex: 0 0 8.333%;  max-width: 8.333%; }
+.col-2  { flex: 0 0 16.666%; max-width: 16.666%; }
+.col-3  { flex: 0 0 25%;     max-width: 25%; }
+.col-4  { flex: 0 0 33.333%; max-width: 33.333%; }
+.col-5  { flex: 0 0 41.666%; max-width: 41.666%; }
+.col-6  { flex: 0 0 50%;     max-width: 50%; }
+.col-7  { flex: 0 0 58.333%; max-width: 58.333%; }
+.col-8  { flex: 0 0 66.666%; max-width: 66.666%; }
+.col-9  { flex: 0 0 75%;     max-width: 75%; }
+.col-10 { flex: 0 0 83.333%; max-width: 83.333%; }
+.col-11 { flex: 0 0 91.666%; max-width: 91.666%; }
+.col-12 { flex: 0 0 100%;    max-width: 100%; }
+
+/* 📐 Alineación vertical y horizontal */
+.align-start    { align-items: flex-start; }
+.align-center   { align-items: center; }
+.align-end      { align-items: flex-end; }
+
+.justify-start  { justify-content: flex-start; }
+.justify-center { justify-content: center; }
+.justify-end    { justify-content: flex-end; }
+.justify-between{ justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+
+/* 📐 Dirección de flujo */
+.flex-row    { flex-direction: row; }
+.flex-column { flex-direction: column; }
+
+/* 📐 Helpers de altura y anchura */
+.w-100   { width: 100%; }
+.h-100   { height: 100%; }
+.min-h-screen { min-height: 100vh; }
+.max-w-full   { max-width: 100%; }
+.max-h-full   { max-height: 100%; }
+
+/* 📐 Layout de pantalla completa */
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 📐 Layout centrado verticalmente */
+.v-center {
+  display: flex;
+  align-items: center;
+}
+
+/* 📐 Layout centrado horizontalmente */
+.h-center {
+  display: flex;
+  justify-content: center;
+}
+
+/* 📐 Layout centrado en ambas direcciones */
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

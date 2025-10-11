@@ -1,0 +1,38 @@
+/* 🔄 Reset universal y normalización */
+@import './fenixnova-reset.css';
+
+/* 🎨 Tokens base del sistema de diseño */
+@import './_fenixnova-tokens.css';
+
+/* 🧩 Helpers atómicos y utilidades */
+@import './fenixnova-helpers.css';
+
+/* 🧱 Sistema de grillas responsivas */
+@import './fenixnova-grid.css';
+
+/* 🧱 Helpers estructurales y layout */
+@import './fenixnova-layout.css';
+
+/* 🧩 Componentes visuales */
+@import './fenixnova-components.css';
+
+/* 📝 Formularios estilizados */
+@import './fenixnova-forms.css';
+
+/* 🧭 Navegación y estructura de interfaz */
+@import './fenixnova-navigation.css';
+
+/* ⚙️ Estados visuales reutilizables */
+@import './fenixnova-states.css';
+
+/* 🔄 Animaciones y transiciones */
+@import './fenixnova-animations.css';
+
+/* 🎯 Extensiones visuales y condicionales */
+@import './fenixnova-extend.css';
+
+/* 🧠 Mixins reutilizables (para preprocesadores) */
+@import './fenixnova-mixins.css';
+
+/* 🎭 Soporte para temas (modo claro/oscuro) */
+@import './fenixnova-theme.css';

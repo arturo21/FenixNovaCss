@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios | FenixNovaCss</title>
+  <link rel="stylesheet" href="dist/fenixnova.bundle.css" />
+
+  <!-- 🎨 Paleta cálida personalizada -->
+  <style>
+    :root {
+      --primary: #d62828;         /* rojo escarlata */
+      --secondary: #f77f00;       /* naranja volcánico */
+      --accent: #fcbf49;          /* dorado cálido */
+      --bg-body: #fff5e6;         /* fondo cálido claro */
+      --bg-surface: #fffaf3;      /* superficie suave */
+      --text-main: #5c1e1e;       /* marrón profundo */
+      --text-muted: #a65c3a;      /* cobre apagado */
+      --border-color: #e0b89f;    /* beige tostado */
+      --shadow-base: 0 2px 6px rgba(0,0,0,0.15);
+      --radius-base: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🧭 Navbar cálido alineado a la derecha -->
+  <header class="navbar" style="gap: 2rem;">
+    <div class="navbar-brand">FenixNova</div>
+
+    <ul class="navbar-links align-start" style="gap: 1rem;">
+      <li><a href="#" class="is-active">Inicio</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Contacto</a></li>
+      <li class="dropdown">
+        <span class="dropdown-toggle">Más ▾</span>
+        <ul class="dropdown-menu">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Soporte</a></li>
+          <li><a href="#">Documentación</a></li>
+        </ul>
+      </li>
+    </ul>
+  </header>
+
+  <!-- 🧱 Hero con formulario -->
+  <main class="container section">
+    <h1 class="text-responsive">Transforma tu negocio con soluciones cálidas</h1>
+    <p>Completa el formulario para recibir una propuesta personalizada.</p>
+
+    <form class="card bg-surface shadow-soft p-md" style="max-width: 600px; margin: 2rem auto;">
+      <div class="form-group">
+        <label for="nombre" class="label">Nombre completo</label>
+        <input type="text" id="nombre" class="input w-full" placeholder="Tu nombre" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="label">Correo electrónico</label>
+        <input type="email" id="email" class="input w-full" placeholder="tucorreo@ejemplo.com" required />
+      </div>
+
+      <div class="form-group">
+        <label for="servicio" class="label">Servicio de interés</label>
+        <select id="servicio" class="select w-full" required>
+          <option value="">Selecciona una opción</option>
+          <option value="automatizacion">Automatización</option>
+          <option value="ui">UI Modular</option>
+          <option value="datos">Integración de datos</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="mensaje" class="label">Mensaje adicional</label>
+        <textarea id="mensaje" class="textarea w-full" rows="4" placeholder="Cuéntanos más sobre tu proyecto..."></textarea>
+      </div>
+
+      <div class="text-center mt-md">
+        <button type="submit" class="button bg-primary text-white rounded transition-fast">Enviar solicitud</button>
+      </div>
+    </form>
+  </main>
+
+  <!-- 🧾 Footer cálido -->
+  <footer class="section text-center">
+    <p class="text-muted">&copy; 2025 FenixNovaCss. Diseñado con pasión y propósito.</p>
+  </footer>
+
+  <!-- 🧠 Script para dropdown -->
+  <script>
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        toggle.parentElement.querySelector('.dropdown-menu').classList.toggle('is-visible');
+      });
+    });
+  </script>
+
+</body>
+</html>

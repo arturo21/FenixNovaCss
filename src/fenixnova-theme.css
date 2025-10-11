@@ -1,0 +1,77 @@
+/* 🎭 Tema claro (por defecto) */
+:root {
+  --theme-bg: var(--bg-body);
+  --theme-surface: var(--bg-surface);
+  --theme-text: var(--text-main);
+  --theme-muted: var(--text-muted);
+  --theme-border: var(--border-color);
+  --theme-primary: var(--primary);
+  --theme-secondary: var(--secondary);
+  --theme-success: var(--success);
+  --theme-danger: var(--danger);
+  --theme-warning: var(--warning);
+}
+
+/* 🎭 Tema oscuro activado por atributo */
+[data-theme="dark"],
+.theme-dark {
+  --theme-bg: #121212;
+  --theme-surface: #1e1e1e;
+  --theme-text: #f1f1f1;
+  --theme-muted: #999999;
+  --theme-border: #333333;
+  --theme-primary: #ff6b6b;
+  --theme-secondary: #4ecdc4;
+  --theme-success: #2ec4b6;
+  --theme-danger: #e63946;
+  --theme-warning: #f4a261;
+}
+
+/* 🧩 Aplicación de tema */
+body {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+.card,
+.modal-content,
+.dropdown-menu,
+.alert {
+  background-color: var(--theme-surface);
+  color: var(--theme-text);
+  border-color: var(--theme-border);
+}
+
+.button {
+  background-color: var(--theme-primary);
+  color: #fff;
+}
+
+.button:hover {
+  background-color: var(--theme-secondary);
+}
+
+.input,
+.textarea,
+.select {
+  background-color: var(--theme-surface);
+  color: var(--theme-text);
+  border-color: var(--theme-border);
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  border-color: var(--theme-primary);
+}
+
+.navbar {
+  background-color: var(--theme-surface);
+  color: var(--theme-text);
+  border-bottom: 1px solid var(--theme-border);
+}
+
+.badge {
+  background-color: var(--theme-secondary);
+  color: #fff;
+}

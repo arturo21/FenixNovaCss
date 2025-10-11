@@ -1,0 +1,83 @@
+/* 📌 Centrado absoluto */
+.center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 📌 Centrado flex */
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 📐 Aspect ratio */
+.ratio-1x1 {
+  aspect-ratio: 1 / 1;
+}
+.ratio-16x9 {
+  aspect-ratio: 16 / 9;
+}
+.ratio-4x3 {
+  aspect-ratio: 4 / 3;
+}
+.ratio-3x2 {
+  aspect-ratio: 3 / 2;
+}
+
+/* ✂️ Truncado de texto */
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 📏 Espaciado automático */
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* 🧩 Separador visual */
+.divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: var(--spacing-md) 0;
+}
+
+/* 🧩 Overlay */
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: var(--z-sticky);
+}
+
+/* 🧩 Contenedor limitado */
+.container {
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* 🧩 Texto responsivo */
+.text-responsive {
+  font-size: clamp(0.875rem, 2vw, 1.25rem);
+}
+
+/* 🧩 Imagen responsiva */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

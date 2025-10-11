@@ -1,0 +1,117 @@
+/* 🎨 Paleta de colores */
+:root {
+  --primary: #e63946;
+  --secondary: #457b9d;
+  --success: #2a9d8f;
+  --danger: #d62828;
+  --warning: #f4a261;
+  --info: #1d3557;
+  --black: #000000;
+  --white: #ffffff;
+  --gray-light: #f1f1f1;
+  --gray-dark: #333333;
+
+  --text-main: #212529;
+  --text-muted: #6c757d;
+  --bg-surface: #ffffff;
+  --bg-body: #f8f9fa;
+  --border-color: #dee2e6;
+}
+
+/* 🧩 Tipografía */
+:root {
+  --font-family: 'Inter', system-ui, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+
+  --line-height-sm: 1.4;
+  --line-height-md: 1.6;
+  --line-height-lg: 1.8;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+}
+
+/* 📏 Espaciado */
+:root {
+  --spacing-xxs: 0.25rem;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+}
+
+/* 🧱 Bordes y radios */
+:root {
+  --radius-none: 0;
+  --radius-sm: 4px;
+  --radius-base: 6px;
+  --radius-lg: 12px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+}
+
+/* 🌫️ Sombras */
+:root {
+  --shadow-none: none;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-base: 0 2px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 4px 12px rgba(0,0,0,0.15);
+  --shadow-xl: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* 🌀 Transiciones */
+:root {
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+  --transition-slow: 0.4s ease;
+}
+
+/* 📐 Breakpoints */
+:root {
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1440px;
+}
+
+/* 🧩 Z-index */
+:root {
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 500;
+  --z-modal: 1000;
+  --z-tooltip: 1100;
+  --z-max: 9999;
+}
+
+/* 📐 Contenedor */
+:root {
+  --container-max-width: 1200px;
+  --container-padding: var(--spacing-md);
+}
+
+/* 🧩 Iconografía */
+:root {
+  --icon-size-sm: 1rem;
+  --icon-size-md: 1.25rem;
+  --icon-size-lg: 1.5rem;
+  --icon-color-muted: var(--text-muted);
+  --icon-color-active: var(--primary);
+}
+
+/* 🧩 Validación visual */
+:root {
+  --valid-color: var(--success);
+  --invalid-color: var(--danger);
+  --valid-icon: "✔";
+  --invalid-icon: "✖";
+}

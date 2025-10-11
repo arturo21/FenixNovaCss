@@ -1,0 +1,65 @@
+/* ⚙️ Estado: activo */
+.is-active {
+  background-color: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* ⚙️ Estado: deshabilitado */
+.is-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* ⚙️ Estado: enfocado */
+.is-focused {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* ⚙️ Estado: seleccionado */
+.is-selected {
+  background-color: var(--success);
+  color: #fff;
+  border-color: var(--success);
+}
+
+/* ⚙️ Estado: expandido */
+.is-expanded {
+  max-height: 1000px;
+  overflow: visible;
+  transition: max-height 0.3s ease;
+}
+
+/* ⚙️ Estado: colapsado */
+.is-collapsed {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+/* ⚙️ Estado: cargando */
+.is-loading {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.is-loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid var(--primary);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

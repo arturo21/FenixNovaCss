@@ -1,0 +1,103 @@
+/* 🧩 Mixin: centrado absoluto */
+@mixin center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 🧩 Mixin: centrado flex */
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🧩 Mixin: botón base */
+@mixin button-base {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  border: none;
+  border-radius: var(--radius-base);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+/* 🧩 Mixin: tarjeta base */
+@mixin card-base {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-base);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-base);
+}
+
+/* 🧩 Mixin: input base */
+@mixin input-base {
+  padding: 0.5rem;
+  font-size: var(--font-size-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-base);
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  transition: border-color var(--transition-fast);
+}
+
+/* 🧩 Mixin: transición suave */
+@mixin transition-smooth {
+  transition: all var(--transition-fast);
+}
+
+/* 🧩 Mixin: sombra suave */
+@mixin shadow-soft {
+  box-shadow: var(--shadow-sm);
+}
+
+/* 🧩 Mixin: sombra fuerte */
+@mixin shadow-strong {
+  box-shadow: var(--shadow-lg);
+}
+
+/* 🧩 Mixin: borde redondeado */
+@mixin rounded {
+  border-radius: var(--radius-base);
+}
+
+/* 🧩 Mixin: borde pill */
+@mixin rounded-pill {
+  border-radius: var(--radius-pill);
+}
+
+/* 🧩 Mixin: estado deshabilitado */
+@mixin disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* 🧩 Mixin: spinner loading */
+@mixin loading-spinner($color: var(--primary)) {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.6;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid $color;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

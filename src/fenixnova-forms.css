@@ -1,0 +1,107 @@
+/* 📝 Grupo de formulario */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+}
+
+/* 🏷️ Etiqueta */
+.label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-main);
+}
+
+/* ✏️ Campo de entrada */
+.input,
+.textarea,
+.select {
+  padding: 0.5rem;
+  font-size: var(--font-size-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-base);
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  transition: border-color var(--transition-fast);
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* 🧪 Estados visuales */
+.is-valid {
+  border-color: var(--success);
+}
+
+.is-invalid {
+  border-color: var(--danger);
+}
+
+.is-disabled {
+  background-color: var(--gray-light);
+  color: var(--text-muted);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* 💬 Retroalimentación */
+.form-feedback {
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-xs);
+}
+
+.form-feedback.success {
+  color: var(--success);
+}
+
+.form-feedback.error {
+  color: var(--danger);
+}
+
+.form-feedback.warning {
+  color: var(--warning);
+}
+
+/* 🧩 Textarea */
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* 🔽 Select */
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23666'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 0.65rem;
+}
+
+/* 🧩 Checkbox y radio */
+.checkbox,
+.radio {
+  accent-color: var(--primary);
+  margin-right: var(--spacing-xs);
+}
+
+/* 🧩 Botón de envío */
+.form-submit {
+  padding: 0.5rem 1rem;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  border: none;
+  border-radius: var(--radius-base);
+  background-color: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.form-submit:hover {
+  background-color: var(--secondary);
+}

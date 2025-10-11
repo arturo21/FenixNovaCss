@@ -20,15 +20,42 @@
 
 ## 🚀 Características principales
 
-- 🎨 Sistema de diseño tokenizado (`_fenixnova-tokens.css`)
-- 📦 Componentes visuales accesibles y responsivos (`fenixnova-components.css`)
-- 🧩 Helpers atómicos para layout, tipografía, color, visibilidad (`fenixnova-helpers.css`)
-- 🧱 Sistema de grillas flexible y proporcional (`fenixnova-grid.css`)
-- 🧠 Mixins reutilizables para estilos dinámicos (`fenixnova-mixins.css`)
-- 📝 Formularios estilizados con validación visual (`fenixnova-forms.css`)
-- 🎯 Extensiones visuales y utilitarias (`fenixnova-extend.css`)
-- 🎭 Soporte para temas (modo claro/oscuro) (`fenixnova-theme.css`)
-- ⚙️ Estados visuales condicionales (`fenixnova-helpers.css`)
+- 🎨 Sistema de diseño tokenizado  
+  Variables visuales centralizadas para colores, tipografía, espaciado, sombras y radios  
+  Archivo: `_fenixnova-tokens.css`
+
+- 📦 Componentes visuales accesibles y responsivos  
+  Botones, tarjetas, chips, modales, alertas, dropdowns, tabs, badges y más  
+  Archivo: `fenixnova-components.css`
+
+- 🧩 Helpers atómicos para layout, tipografía, color y visibilidad  
+  Clases utilitarias para espaciado, alineación, display, truncado, visibilidad, etc.  
+  Archivo: `fenixnova-helpers.css`
+
+- 🧱 Sistema de grillas flexible y proporcional  
+  Columnas responsivas (`.col-1` a `.col-12`), filas, contenedores y alineación  
+  Archivo: `fenixnova-grid.css`
+
+- 🧠 Mixins Sass reutilizables para estilos dinámicos  
+  Patrones visuales encapsulados para botones, centrado, animaciones, etc.  
+  Archivo: `fenixnova-mixins.css`
+
+- 📝 Formularios estilizados con validación visual  
+  Inputs, selects, textareas, etiquetas, retroalimentación y estados visuales  
+  Archivo: `fenixnova-forms.css`
+
+- 🎯 Extensiones visuales y utilitarias  
+  Helpers para centrado, ratio, espaciado automático, truncado, altura mínima, etc.  
+  Archivo: `fenixnova-extend.css`
+
+- 🎭 Soporte para temas (modo claro/oscuro)  
+  Tokens adaptativos, activación por atributo o clase, integración con componentes  
+  Archivo: `fenixnova-theme.css`
+
+- ⚙️ Estados visuales condicionales  
+  Clases como `.is-active`, `.is-loading`, `.is-disabled`, `.is-focused`, `.is-selected`  
+  Archivo: `fenixnova-helpers.css`
+
 
 ---
 
@@ -54,28 +81,47 @@
 - Consolidación de animaciones y estados
 - Mejora de consistencia entre módulos
 
+### 🧭 Navbar mejorado
+- Alineación izquierda por defecto con Flexbox
+- Separación clara entre `.navbar-brand` y `.navbar-links`
+- Estilos refinados para enlaces activos y hover
+- Implementado en `fenixnova-navigation.css`
+
+### 🎨 Paleta Fénix
+- Nueva paleta de colores cálidos inspirada en el ave fénix
+- Tonos escarlata, volcánicos y dorados para transmitir energía y elegancia
+- Integración con tokens visuales y temas
+- Aplicable vía `:root` o tema personalizado
+
+### 🧪 Bundle experimental
+- Módulos adicionales compilados en `fenixnova-experimental.css`
+- Incluye accesibilidad, utilidades extendidas, animaciones Sass convertidas, y tema oscuro alternativo
+- Ideal para proyectos avanzados o variantes personalizadas
+
+
 ---
 
 ## 🚀 Módulos disponibles
 
 FenixNovaCss está dividido en módulos independientes que puedes importar según tus necesidades:
 
-| Módulo                    | Función principal                                      |
-|--------------------------|--------------------------------------------------------|
-| `fenixnova.css`          | Reset base, tipografía, variables globales             |
-| `fenixnova-theme.css`    | Temas: claro, oscuro, corporativo                      |
-| `fenixnova-grid.css`     | Sistema de grillas: smart, fixed, dashboard            |
-| `fenixnova-columns.css`  | Sistema de columnas y layouts responsivos              |
-| `fenixnova-form.css`     | Componentes de formulario: input, select, textarea     |
-| `fenixnova-components.css`| UI: card, modal, navbar, tabs, panel, dropdown        |
-| `fenixnova-elements.css` | Elementos: botón, tag, tabla, imagen, título           |
-| `fenixnova-buttons.css`  | Sistema completo de botones con variantes y estados    |
-| `fenixnova-helpers.css`  | Utilidades: color, espaciado, visibilidad, flexbox     |
-| `fenixnova-extend.css`   | Extensiones personalizadas                            |
-| `fenixnova-mixins.scss`  | Mixins Sass para temas, breakpoints, animaciones       |
-| `_fenixnova-tokens.scss` | Tokens Sass para colores, fuentes, radios, sombras     |
+| Módulo                      | Función principal                                                  |
+|----------------------------|--------------------------------------------------------------------|
+| `fenixnova-reset.css`      | Reset base universal, normalización de elementos HTML              |
+| `_fenixnova-tokens.css`    | Tokens visuales: colores, tipografía, espaciado, sombras, radios   |
+| `fenixnova-theme.css`      | Soporte para temas: claro, oscuro, variantes adaptativas           |
+| `fenixnova-grid.css`       | Sistema de grillas proporcionales y responsivas                    |
+| `fenixnova-layout.css`     | Layout estructural: columnas, filas, contenedores, alineación      |
+| `fenixnova-helpers.css`    | Utilidades atómicas: espaciado, color, visibilidad, flexbox        |
+| `fenixnova-extend.css`     | Extensiones visuales: centrado, ratio, truncado, altura mínima     |
+| `fenixnova-forms.css`      | Formularios estilizados: inputs, selects, textareas, validación    |
+| `fenixnova-buttons.css`    | Sistema completo de botones con variantes, estados y accesibilidad |
+| `fenixnova-components.css` | Componentes UI: card, modal, navbar, tabs, dropdown, chip, alertas |
+| `fenixnova-navigation.css` | Navegación: navbar, tabs, breadcrumbs, dropdowns                   |
+| `fenixnova-mixins.css`     | Mixins Sass reutilizables para patrones visuales                   |
+| `fenixnova.entry.css`      | Punto de entrada para compilar todos los módulos                   |
+| `fenixnova-experimental.css`| Bundle extendido: accesibilidad, animaciones, tema fénix, utilidades |
 
----
 
 ## 🎨 Clases disponibles
 
@@ -95,27 +141,33 @@ FenixNovaCss incluye clases semánticas y utilitarias para construir interfaces 
 
 ## 🧩 Helpers disponibles
 
-FenixNovaCss incluye clases utilitarias para acelerar el desarrollo:
+FenixNovaCss incluye clases utilitarias para acelerar el desarrollo y mantener el código limpio y modular:
 
 ### 🎨 Color
 
-- `.has-text-primary`, `.has-background-success`, `.has-text-muted`, etc.
+- `.text-primary`, `.bg-success`, `.text-muted`, `.bg-warning`, `.text-danger`, etc.
+- `.has-text-primary`, `.has-background-success` (compatibilidad extendida)
 
 ### 📏 Espaciado
 
-- `.m-0`, `.mt-1`, `.p-0`, `.pb-1`, `.pl-1`, etc.
+- `.m-0`, `.mt-sm`, `.mb-md`, `.p-0`, `.pl-lg`, `.px-auto`, etc.
+- Soporte para espaciado proporcional (`sm`, `md`, `lg`, `xl`) y automático (`auto`)
 
 ### ✍️ Tipografía
 
-- `.is-uppercase`, `.is-bold`, `.has-text-centered`, `.is-small`, `.is-large`
+- `.is-uppercase`, `.is-bold`, `.text-center`, `.text-start`, `.text-end`
+- `.text-small`, `.text-large`, `.text-responsive`
 
 ### 👁️ Visibilidad
 
-- `.is-hidden`, `.is-invisible`, `.is-block`, `.is-inline-flex`
+- `.is-hidden`, `.is-invisible`, `.d-block`, `.d-inline-flex`, `.d-none`
+- `.is-visible`, `.is-clipped`, `.is-overlay`
 
 ### 📦 Flexbox
 
-- `.is-flex`, `.is-justify-center`, `.is-align-start`, `.is-flex-wrap`
+- `.d-flex`, `.flex-wrap`, `.flex-nowrap`, `.flex-column`, `.flex-row`
+- `.justify-start`, `.justify-center`, `.justify-end`
+- `.align-start`, `.align-center`, `.align-end`
 
 ### 🧩 Funcionales
 
@@ -126,7 +178,7 @@ FenixNovaCss incluye clases utilitarias para acelerar el desarrollo:
 - `.is-radiusless`, `.is-shadowless` – elimina estilos visuales
 - `.is-unselectable` – evita selección de texto
 - `.is-clickable` – aplica cursor pointer
-- `.is-relative` – aplica posición relativa
+- `.is-relative`, `.is-absolute`, `.is-fixed` – posicionamiento
 
 ---
 
