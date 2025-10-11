@@ -13,6 +13,9 @@
 /* 🧱 Helpers estructurales y layout */
 @import './fenixnova-layout.css';
 
+/* 🧩 Componentes botones */
+@import './fenixnova-buttons.css';
+
 /* 🧩 Componentes visuales */
 @import './fenixnova-components.css';
 
@@ -36,3 +39,6 @@
 
 /* 🎭 Soporte para temas (modo claro/oscuro) */
 @import './fenixnova-theme.css';
+
+/* 🎭 Soporte para ventanas modales */
+@import './fenixnova-modal.css';

@@ -91,6 +91,75 @@
         <button type="submit" class="button bg-primary text-white rounded transition-fast">Enviar solicitud</button>
       </div>
     </form>
+
+<section class="section p-xl">
+  <h2 class="text-center mb-lg">🎯 Botones con FenixNovaCss</h2>
+
+  <div class="d-flex flex-wrap gap-md justify-center">
+
+    <!-- 🔴 Botón primario -->
+    <button class="btn is-primary is-bold is-clickable">Primario</button>
+
+    <!-- 🟡 Botón secundario -->
+    <button class="btn is-secondary is-clickable">Secundario</button>
+
+    <!-- 🟠 Botón de acento con ícono -->
+    <button class="btn is-accent is-clickable d-flex align-center gap-sm">
+      <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2L15 8H9L12 2ZM12 22C11.4 22 11 21.6 11 21V10H13V21C13 21.6 12.6 22 12 22Z"/>
+      </svg>
+      Acción
+    </button>
+
+    <!-- ⚪ Botón deshabilitado -->
+    <button class="btn is-primary is-disabled" disabled>Deshabilitado</button>
+
+    <!-- 🔄 Botón cargando -->
+    <button class="btn is-primary is-loading">
+      <span class="spinner"></span> Cargando...
+    </button>
+
+    <!-- 🧭 Botón con animación hover -->
+    <button class="btn is-primary is-clickable scale-hover">Interactivo</button>
+
+  </div>
+</section>
+<!-- 🔲 Overlay -->
+<div class="modal-overlay is-visible" onclick="closeModal()"></div>
+
+<!-- 🔲 Overlay -->
+<div class="modal-overlay is-visible" onclick="closeModal()"></div>
+
+<!-- 🪟 Modal -->
+<div class="modal is-visible fade-in is-lg">
+  <div class="modal-header">
+    <h3 class="text-primary">Resumen del componente</h3>
+    <button class="btn is-icon-only is-muted" onclick="closeModal()">✕</button>
+  </div>
+
+  <div class="modal-body">
+    <p>Este componente forma parte del sistema FenixNovaCss. Está diseñado para ser modular, accesible y visualmente coherente con tu paleta Fénix.</p>
+
+    <ul class="mt-sm">
+      <li>✅ Header con altura mínima de 50px y máxima de 300px</li>
+      <li>✅ Padding inferior de 5px en el header</li>
+      <li>✅ Overlay con cierre por clic</li>
+      <li>✅ Animación <code>fade-in</code> integrada</li>
+      <li>✅ Agrupación de botones con <code>.btn-group</code></li>
+    </ul>
+
+    <p class="mt-md">Puedes extender este modal con formularios, tabs, alerts o cualquier componente del framework.</p>
+  </div>
+
+  <div class="modal-footer btn-group end mt-md">
+    <div class="btn-group horizontal mr-5">
+      <button class="btn is-outline" onclick="closeModal()">Cerrar</button>
+      <button class="btn is-primary">Guardar cambios</button>
+    </div>
+  </div>
+</div>
+
+
   </main>
 
   <!-- 🧾 Footer cálido -->
@@ -105,7 +174,10 @@
         toggle.parentElement.querySelector('.dropdown-menu').classList.toggle('is-visible');
       });
     });
-  </script>
-
+    function closeModal() {
+      document.querySelector('.modal').classList.remove('is-visible');
+      document.querySelector('.modal-overlay').classList.remove('is-visible');
+    }
+</script>
 </body>
 </html>
