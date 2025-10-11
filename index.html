@@ -7,29 +7,43 @@
   <link rel="stylesheet" href="dist/fenixnova.bundle.css" />
 
   <!-- 🎨 Paleta cálida personalizada -->
-  <style>
+  <style type="text/css">
     :root {
-      --primary: #d62828;         /* rojo escarlata */
-      --secondary: #f77f00;       /* naranja volcánico */
-      --accent: #fcbf49;          /* dorado cálido */
-      --bg-body: #fff5e6;         /* fondo cálido claro */
-      --bg-surface: #fffaf3;      /* superficie suave */
-      --text-main: #5c1e1e;       /* marrón profundo */
-      --text-muted: #a65c3a;      /* cobre apagado */
-      --border-color: #e0b89f;    /* beige tostado */
-      --shadow-base: 0 2px 6px rgba(0,0,0,0.15);
-      --radius-base: 6px;
+      --primary: #e63946;         /* rojo moderno vibrante */
+      --secondary: #ffb703;       /* amarillo dorado intenso */
+      --accent: #fb8500;          /* naranja cálido y activo */
+      --bg-body: #fdfcfb;         /* fondo claro neutro */
+      --bg-surface: #ffffff;      /* superficie limpia */
+      --text-main: #2b2d42;       /* gris oscuro elegante */
+      --text-muted: #8d99ae;      /* gris azulado suave */
+      --text-hover: #ffffff;      /* texto blanco en hover */
+      --border-color: #dee2e6;    /* gris claro para bordes */
+      --shadow-base: 0 2px 8px rgba(0, 0, 0, 0.08);
+      --radius-base: 8px;
     }
   </style>
 </head>
 <body>
 
   <!-- 🧭 Navbar cálido alineado a la derecha -->
-  <header class="navbar" style="gap: 2rem;">
-    <div class="navbar-brand">FenixNova</div>
+  <header class="navbar">
+    <div class="navbar-brand d-flex align-center gap-sm">
+      <!-- 🔥 Logo Fénix en SVG -->
+      <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="border-radius: var(--radius-base);">
+        <path d="M32 4c4 6 10 10 16 12-6 2-10 6-12 12 6-2 10-6 12-12 4 10 0 20-8 28-4 4-8 6-12 6s-8-2-12-6c-8-8-12-18-8-28 2 6 6 10 12 12-2-6-6-10-12-12 6-2 12-6 16-12z" fill="url(#phoenixGradient)"/>
+        <defs>
+          <linearGradient id="phoenixGradient" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#e63946"/>
+            <stop offset="0.5" stop-color="#fb8500"/>
+            <stop offset="1" stop-color="#ffb703"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="text-primary" style="font-weight: bold;">FenixNova</span>
+    </div>
 
-    <ul class="navbar-links align-start" style="gap: 1rem;">
-      <li><a href="#" class="is-active">Inicio</a></li>
+    <ul class="navbar-links">
+      <li><a href="#">Inicio</a></li>
       <li><a href="#">Servicios</a></li>
       <li><a href="#">Contacto</a></li>
       <li class="dropdown">
@@ -42,7 +56,6 @@
       </li>
     </ul>
   </header>
-
   <!-- 🧱 Hero con formulario -->
   <main class="container section">
     <h1 class="text-responsive">Transforma tu negocio con soluciones cálidas</h1>
