@@ -92,6 +92,21 @@ Este módulo se integra perfectamente con otros componentes del framework FenixN
 | `fenixnova-components.css` | Agrupación opcional como componente UI                           |
 | `general.js`               | Navegación, autoplay, sincronización de flechas y dots (JS)      |
 
+## 🚀 Ejemplo 1: Inicialización automática con autoplay y teclado
+
+```html
+<!-- HTML -->
+<div class="slider" data-fnx="slider" data-autoplay="true" data-interval="4000" data-loop="true">
+  <!-- contenido del slider -->
+</div>
+```
+
+```js
+// JS
+document.addEventListener('DOMContentLoaded', () => {
+  FenixNovaSlider.init().autoplay().enableKeyboard();
+});
+```
 
 ## Clase JS (propuesta) para el manejo del Slider
 
