@@ -45,3 +45,6 @@
 
 /* 🎭 Soporte para ventanas modales */
 @import './fenixnova-modal.css';
+
+/* 🎭 Soporte para slider */
+@import './fenixnova-slider.css';
