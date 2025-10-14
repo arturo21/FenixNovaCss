@@ -61,42 +61,49 @@
 
 ## 🆕 Mejoras recientes
 
-### ✅ Sistema de chips (inspirado en Angular Material)
-- Chips básicos, seleccionables, removibles y con íconos
-- Variantes de color y layout responsivo
+✅ **Sistema de chips** (inspirado en Angular Material)  
+- Chips básicos, seleccionables, removibles y con íconos  
+- Variantes de color y layout responsivo  
 - Implementado en `fenixnova-components.css`
 
-### 🎭 Soporte para temas
-- Modo claro y oscuro con tokens adaptables
-- Activación por `[data-theme="dark"]` o `.theme-dark`
+🎭 **Soporte para temas**  
+- Modo claro y oscuro con tokens adaptables  
+- Activación por `[data-theme="dark"]` o `.theme-dark`  
 - Implementado en `fenixnova-theme.css`
 
-### ⚙️ Sistema de estados visuales
-- Clases como `.is-active`, `.is-disabled`, `.is-loading`, `.is-expanded`, `.is-collapsed`, `.is-focused`, `.is-selected`
-- Indicadores visuales y animaciones
+⚙️ **Sistema de estados visuales**  
+- Clases como `.is-active`, `.is-disabled`, `.is-loading`, `.is-expanded`, `.is-collapsed`, `.is-focused`, `.is-selected`  
+- Indicadores visuales y animaciones integradas  
 - Implementado en `fenixnova-helpers.css`
 
-### 🧼 Depuración y optimización
-- Eliminación de clases duplicadas y redundantes
-- Consolidación de animaciones y estados
+📊 **Tablas accesibles y responsivas**  
+- Soporte para `thead`, `tbody`, `th`, `td`, filas alternas y hover  
+- Compatibilidad con Bulma (`.is-bordered`, `.is-striped`, `.is-hoverable`)  
+- Tema oscuro automático con `prefers-color-scheme`  
+- Implementado en `fenixnova-tables.css`
+
+🧼 **Depuración y optimización**  
+- Eliminación de clases duplicadas y redundantes  
+- Consolidación de animaciones y estados visuales  
 - Mejora de consistencia entre módulos
 
-### 🧭 Navbar mejorado
-- Alineación izquierda por defecto con Flexbox
-- Separación clara entre `.navbar-brand` y `.navbar-links`
-- Estilos refinados para enlaces activos y hover
+🧭 **Navbar mejorado**  
+- Alineación izquierda por defecto con Flexbox  
+- Separación clara entre `.navbar-brand` y `.navbar-links`  
+- Estilos refinados para enlaces activos y hover  
 - Implementado en `fenixnova-navigation.css`
 
-### 🎨 Paleta Fénix
-- Nueva paleta de colores cálidos inspirada en el ave fénix
-- Tonos escarlata, volcánicos y dorados para transmitir energía y elegancia
-- Integración con tokens visuales y temas
+🎨 **Paleta Fénix**  
+- Nueva paleta de colores cálidos inspirada en el ave fénix  
+- Tonos escarlata, volcánicos y dorados para transmitir energía y elegancia  
+- Integración con tokens visuales y temas  
 - Aplicable vía `:root` o tema personalizado
 
-### 🧪 Bundle experimental
-- Módulos adicionales compilados en `fenixnova-experimental.css`
-- Incluye accesibilidad, utilidades extendidas, animaciones Sass convertidas, y tema oscuro alternativo
+🧪 **Bundle experimental**  
+- Módulos adicionales compilados en `fenixnova-experimental.css`  
+- Incluye accesibilidad, utilidades extendidas, animaciones Sass convertidas y tema oscuro alternativo  
 - Ideal para proyectos avanzados o variantes personalizadas
+
 
 
 ---
