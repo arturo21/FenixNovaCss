@@ -105,23 +105,25 @@
 
 FenixNovaCss está dividido en módulos independientes que puedes importar según tus necesidades:
 
-| Módulo                      | Función principal                                                  |
-|----------------------------|--------------------------------------------------------------------|
-| `fenixnova-reset.css`      | Reset base universal, normalización de elementos HTML              |
-| `_fenixnova-tokens.css`    | Tokens visuales: colores, tipografía, espaciado, sombras, radios   |
-| `fenixnova-theme.css`      | Soporte para temas: claro, oscuro, variantes adaptativas           |
-| `fenixnova-grid.css`       | Sistema de grillas proporcionales y responsivas                    |
-| `fenixnova-layout.css`     | Layout estructural: columnas, filas, contenedores, alineación      |
-| `fenixnova-helpers.css`    | Utilidades atómicas: espaciado, color, visibilidad, flexbox        |
-| `fenixnova-extend.css`     | Extensiones visuales: centrado, ratio, truncado, altura mínima     |
-| `fenixnova-forms.css`      | Formularios estilizados: inputs, selects, textareas, validación    |
-| `fenixnova-buttons.css`    | Sistema completo de botones con variantes, estados y accesibilidad |
-| `fenixnova-components.css` | Componentes UI: card, modal, navbar, tabs, dropdown, chip, alertas |
-| `fenixnova-navigation.css` | Navegación: navbar, tabs, breadcrumbs, dropdowns                   |
-| `fenixnova-mixins.css`     | Mixins Sass reutilizables para patrones visuales                   |
-| `fenixnova.entry.css`      | Punto de entrada para compilar todos los módulos                   |
-| `fenixnova-experimental.css`| Bundle extendido: accesibilidad, animaciones, tema fénix, utilidades |
+## 📦 Módulos disponibles en FenixNovaCss
 
+| Módulo                       | Función principal                                                  |
+|-----------------------------|--------------------------------------------------------------------|
+| `fenixnova-reset.css`       | Reset base universal, normalización de elementos HTML              |
+| `_fenixnova-tokens.css`     | Tokens visuales: colores, tipografía, espaciado, sombras, radios   |
+| `fenixnova-theme.css`       | Soporte para temas: claro, oscuro, variantes adaptativas           |
+| `fenixnova-grid.css`        | Sistema de grillas proporcionales y responsivas                    |
+| `fenixnova-layout.css`      | Layout estructural: columnas, filas, contenedores, alineación      |
+| `fenixnova-helpers.css`     | Utilidades atómicas: espaciado, color, visibilidad, flexbox        |
+| `fenixnova-extend.css`      | Extensiones visuales: centrado, ratio, truncado, altura mínima     |
+| `fenixnova-forms.css`       | Formularios estilizados: inputs, selects, textareas, validación    |
+| `fenixnova-buttons.css`     | Sistema completo de botones con variantes, estados y accesibilidad |
+| `fenixnova-components.css`  | Componentes UI: card, modal, navbar, tabs, dropdown, chip, alertas |
+| `fenixnova-navigation.css`  | Navegación: navbar, tabs, breadcrumbs, dropdowns                   |
+| `fenixnova-tables.css`      | Tablas accesibles, responsivas, con soporte para temas y compatibilidad Bulma |
+| `fenixnova-mixins.css`      | Mixins Sass reutilizables para patrones visuales                   |
+| `fenixnova.entry.css`       | Punto de entrada para compilar todos los módulos                   |
+| `fenixnova-experimental.css`| Bundle extendido: accesibilidad, animaciones, tema fénix, utilidades |
 
 ## 🎨 Clases disponibles
 
