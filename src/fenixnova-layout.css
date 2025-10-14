@@ -14,6 +14,68 @@
   padding-bottom: var(--spacing-xl);
 }
 
+/* 🧭 Encabezado principal */
+.header {
+  width: 100%;
+  padding-top: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  background-color: var(--bg-surface);
+  color: var(--text-heading);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* 📐 Contenido interno del header */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* 🎨 Variantes temáticas */
+.header-dark {
+  background-color: var(--bg-surface-dark);
+  color: var(--text-heading-dark);
+  border-bottom: 1px solid var(--border-color-dark);
+}
+
+.header-light {
+  background-color: var(--bg-surface);
+  color: var(--text-heading);
+}
+
+.header-transparent {
+  background-color: transparent;
+  border-bottom: none;
+}
+
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* 📱 Responsividad */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+}
+
 /* 📐 Columnas flexibles */
 .row {
   display: flex;
