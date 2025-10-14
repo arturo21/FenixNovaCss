@@ -1,0 +1,115 @@
+/* 📐 Estructura base */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+}
+
+/* 🧱 Encabezado */
+.table thead {
+  background-color: var(--bg-muted);
+}
+
+.table thead th {
+  text-align: left;
+  font-weight: 600;
+  padding: 0.75rem;
+  color: var(--text-heading);
+  border-bottom: 2px solid var(--border-color);
+}
+
+/* 🧩 Cuerpo */
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid var(--border-color);
+}
+
+/* 🎨 Filas alternas */
+.table-striped tbody tr:nth-child(odd) {
+  background-color: var(--bg-alt);
+}
+
+.table-striped tbody tr:nth-child(even) {
+  background-color: var(--bg-surface);
+}
+
+/* 🎨 Hover */
+.table-hover tbody tr:hover {
+  background-color: var(--bg-hover);
+}
+
+/* 📏 Tamaño compacto */
+.table-sm thead th,
+.table-sm tbody td {
+  padding: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* 📱 Responsiva */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-scroll {
+  display: block;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* 🧩 Compatibilidad con Bulma.io */
+.is-bordered   { border: 1px solid var(--border-color); }
+.is-fullwidth  { width: 100%; }
+.is-striped    { background-color: var(--bg-alt); }
+.is-narrow td,
+.is-narrow th  { padding: 0.5rem; }
+
+/* 🌙 Tema oscuro */
+@media (prefers-color-scheme: dark) {
+  .table {
+    background-color: var(--bg-surface-dark);
+    color: var(--text-main-dark);
+  }
+
+  .table thead {
+    background-color: var(--bg-muted-dark);
+  }
+
+  .table thead th {
+    color: var(--text-heading-dark);
+    border-bottom: 2px solid var(--border-color-dark);
+  }
+
+  .table tbody td {
+    border-top: 1px solid var(--border-color-dark);
+  }
+
+  .table-striped tbody tr:nth-child(odd) {
+    background-color: var(--bg-alt-dark);
+  }
+
+  .table-striped tbody tr:nth-child(even) {
+    background-color: var(--bg-surface-dark);
+  }
+
+  .table-hover tbody tr:hover {
+    background-color: var(--bg-hover-dark);
+  }
+}
+
+/* 🧠 Accesibilidad */
+.table caption {
+  caption-side: top;
+  font-weight: bold;
+  padding: 0.5rem;
+  text-align: left;
+  color: var(--text-muted);
+}

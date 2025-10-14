@@ -40,5 +40,8 @@
 /* 🎭 Soporte para temas (modo claro/oscuro) */
 @import './fenixnova-theme.css';
 
+/* 🎭 Soporte para tablas */
+@import './fenixnova-tables.css';
+
 /* 🎭 Soporte para ventanas modales */
 @import './fenixnova-modal.css';
