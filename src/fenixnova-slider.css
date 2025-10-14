@@ -23,9 +23,24 @@
   min-width: 100%;
   flex-shrink: 0;
   position: relative;
+  padding: var(--spacing-lg);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-md);
 }
 
-/* 🖼️ Imagen dentro del slide */
+/* 🧩 Contenido interno dentro del slide */
+.slider-content {
+  max-width: 800px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+/* 🖼️ Imagen dentro del slide (opcional) */
 .slider-image {
   width: 100%;
   height: auto;
@@ -103,15 +118,6 @@
   background-color: var(--text-heading);
 }
 
-/* 🔁 Autoplay indicador (opcional) */
-.slider-autoplay {
-  position: absolute;
-  bottom: var(--spacing-sm);
-  right: var(--spacing-sm);
-  font-size: 0.75rem;
-  color: var(--text-muted);
-}
-
 /* 🌙 Tema oscuro */
 [data-theme="dark"] .slider {
   background-color: var(--bg-muted-dark);
@@ -140,6 +146,10 @@
 
 /* 📱 Responsividad */
 @media (max-width: 768px) {
+  .slider-slide {
+    padding: var(--spacing-md);
+  }
+
   .slider-caption {
     font-size: 0.75rem;
     max-width: 90%;

@@ -43,6 +43,70 @@ Este módulo define un slider accesible, responsivo y temáticamente adaptable. 
 </div>
 ```
 
+## Ejemplo de uso: Slider con estructura HTML compleja
+
+```html
+<!-- Slider con contenido interactivo -->
+<div class="slider" data-fnx="slider" data-autoplay="true" data-interval="7000" data-loop="true" data-pause="true">
+  <div class="slider-track">
+
+    <!-- Slide 1: Presentación -->
+    <div class="slider-slide">
+      <div class="slider-content">
+        <h2 class="text-heading">Bienvenido a nuestra plataforma</h2>
+        <p class="text-body">Descubre cómo transformar tu presencia digital con herramientas modulares, accesibles y escalables.</p>
+        <a href="#descubre" class="btn btn-primary">Descúbrelo ahora</a>
+      </div>
+    </div>
+
+    <!-- Slide 2: Formulario de contacto -->
+    <div class="slider-slide">
+      <div class="slider-content">
+        <h2 class="text-heading">Solicita una demo personalizada</h2>
+        <form class="form" action="/submit" method="POST">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" required>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn btn-success">Enviar solicitud</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Slide 3: Testimonio o llamado a la acción -->
+    <div class="slider-slide">
+      <div class="slider-content">
+        <blockquote class="testimonial">
+          “Gracias a FenixNovaCss, logramos lanzar nuestra plataforma educativa en tiempo récord, con un diseño que inspira confianza y creatividad.”
+        </blockquote>
+        <p class="text-muted">— Fundación Educativa Raíces</p>
+        <a href="/casos" class="btn btn-outline">Ver caso completo</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Flechas de navegación -->
+  <button class="slider-arrow slider-prev" aria-label="Anterior">←</button>
+  <button class="slider-arrow slider-next" aria-label="Siguiente">→</button>
+
+  <!-- Dots indicadores -->
+  <div class="slider-dots">
+    <span class="slider-dot is-active" aria-label="Slide 1"></span>
+    <span class="slider-dot" aria-label="Slide 2"></span>
+    <span class="slider-dot" aria-label="Slide 3"></span>
+  </div>
+</div>
+```
+
 ## 🎨 Clases disponibles
 
 | Clase               | Función                                                                 |
@@ -112,8 +176,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 ```js
 /**
- * 🎞️ FenixNovaSlider — Módulo revelado con múltiples mejoras
- * Soporta múltiples sliders, autoplay, accesibilidad, swipe táctil, configuración por data-atributos y encadenamiento
+ * 🎞️ FenixNovaSlider — Módulo revelado extendido
+ * Soporta contenido HTML complejo dentro de slides, accesibilidad, swipe, autoplay y encadenamiento
  */
 const FenixNovaSlider = (function () {
   const sliders = [];
@@ -123,9 +187,8 @@ const FenixNovaSlider = (function () {
       const config = {
         autoplay: el.dataset.autoplay === 'true',
         interval: parseInt(el.dataset.interval) || 5000,
-        loop: el.dataset.loop === 'true',
-        direction: el.dataset.direction || 'horizontal',
-        transition: el.dataset.transition || 'slide',
+        loop: el.dataset.loop !== 'false',
+        pauseOnHover: el.dataset.pause !== 'false',
       };
       sliders.push(createInstance(el, config, index));
     });
@@ -157,6 +220,14 @@ const FenixNovaSlider = (function () {
     let timer = null;
     let startX = 0;
 
+    root.setAttribute('role', 'region');
+    root.setAttribute('aria-label', `Slider ${id + 1}`);
+    slides.forEach((slide, i) => {
+      slide.setAttribute('role', 'group');
+      slide.setAttribute('aria-roledescription', 'slide');
+      slide.setAttribute('aria-label', `Slide ${i + 1} of ${slides.length}`);
+    });
+
     function goTo(index) {
       if (!config.loop && (index < 0 || index >= slides.length)) return;
       current = (index + slides.length) % slides.length;
@@ -178,10 +249,12 @@ const FenixNovaSlider = (function () {
       if (nextBtn) nextBtn.addEventListener('click', () => next());
       dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
 
-      root.addEventListener('mouseenter', pause);
-      root.addEventListener('mouseleave', resume);
-      root.addEventListener('focusin', pause);
-      root.addEventListener('focusout', resume);
+      if (config.pauseOnHover) {
+        root.addEventListener('mouseenter', pause);
+        root.addEventListener('mouseleave', resume);
+        root.addEventListener('focusin', pause);
+        root.addEventListener('focusout', resume);
+      }
 
       root.addEventListener('touchstart', e => (startX = e.touches[0].clientX));
       root.addEventListener('touchend', e => {
@@ -200,7 +273,9 @@ const FenixNovaSlider = (function () {
     }
 
     function autoplay(interval) {
+      clearInterval(timer);
       timer = setInterval(() => next(), interval);
+      root.dispatchEvent(new CustomEvent('slider:autoplay', { detail: { interval } }));
     }
 
     function pause() {
@@ -236,3 +311,11 @@ document.addEventListener('DOMContentLoaded', () => {
   FenixNovaSlider.init().autoplay().enableKeyboard();
 });
 ```
+
+## Recomendaciones
+
+  Puedes usar .slider-content como contenedor flexible para cualquier estructura: formularios, listas, íconos, columnas, etc.
+
+  Asegúrate de que los elementos interactivos como <form>, <input>, <button> estén bien espaciados y accesibles en móviles.
+
+  Si usas data-pause="true", el autoplay se detiene al enfocar el formulario, evitando que el usuario pierda el contexto.
