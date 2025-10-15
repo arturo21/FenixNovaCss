@@ -17,7 +17,8 @@
 </p>
 
 ---
-# 📊 Comparativa: FenixNovaCss vs Tailwind CSS vs Bulma.io
+# 📊 Comparativa:
+# FenixNovaCss vs Tailwind CSS vs Bulma.io
 
 Este cuadro destaca las características que hacen de **FenixNovaCss** una opción viable frente a **Tailwind CSS** y **Bulma.io**, especialmente en contextos educativos, culturales y creativos.
 
