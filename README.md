@@ -17,6 +17,33 @@
 </p>
 
 ---
+# 📊 Comparativa: FenixNovaCss vs Tailwind CSS vs Bulma.io
+
+Este cuadro destaca las características que hacen de **FenixNovaCss** una opción viable frente a **Tailwind CSS** y **Bulma.io**, especialmente en contextos educativos, culturales y creativos.
+
+| Característica                        | 🟣 FenixNovaCss                          | 🔵 Tailwind CSS                          | 🟢 Bulma.io                              |
+|--------------------------------------|-----------------------------------------|------------------------------------------|------------------------------------------|
+| 🧱 Filosofía de diseño                | Modular + semántica + emocional         | Utilitario puro                          | Semántico + componentes predefinidos     |
+| 🎨 Personalización visual            | Tokens CSS (`--color`, `--spacing`)     | Config JS (`tailwind.config.js`)         | Variables Sass (`$primary`, `$spacing`)  |
+| 🧩 Modularidad                       | Archivos por función (`slider.css`, etc.) | Clases utilitarias + plugins             | Componentes agrupados (`navbar`, `card`) |
+| 🧠 Accesibilidad integrada           | Roles ARIA + estructura semántica       | Clases como `sr-only`, `focus:outline`   | Buen soporte básico                      |
+| 📐 Responsividad                     | Clases semánticas + variantes (`.responsive-md`) | Breakpoints (`md:`, `lg:`)               | Clases como `is-mobile`, `is-desktop`    |
+| 🧬 Soporte para contenido complejo   | Slides con formularios, CTAs, layouts   | Requiere composición manual              | Limitado a componentes visuales          |
+| 🧠 Enfoque pedagógico                | Pensado para educadores y creadores     | Enfocado en desarrolladores              | Enfocado en diseño rápido                |
+| 🧩 Integración con JS modular        | `general.js` con módulos encadenables   | Alpine.js, React, Vue                    | JS opcional para algunos componentes     |
+| 🌙 Soporte de temas                  | Claro/oscuro con `data-theme` + tokens  | `darkMode: 'class'` o `media`            | Requiere personalización Sass            |
+| 📚 Documentación emocional           | README.md con simbolismo y contexto     | Técnica y extensa                        | Clara pero más técnica                   |
+| 🇻🇪 Enfoque cultural                 | Adaptado a contextos latinos y educativos | Global y técnico                         | Global y visual                          |
+
+---
+
+## ✅ ¿Por qué elegir FenixNovaCss?
+
+- Diseñado para **educadores, creadores y desarrolladores** que valoran la semántica, la accesibilidad y la belleza emocional.
+- Permite **estructuras HTML complejas** dentro de sliders, formularios y layouts sin romper el diseño.
+- Ofrece una experiencia **modular, documentada y adaptable** para proyectos con propósito cultural, pedagógico o comunitario.
+
+---
 
 ## 🚀 Características principales
 
@@ -55,7 +82,6 @@
 - ⚙️ Estados visuales condicionales  
   Clases como `.is-active`, `.is-loading`, `.is-disabled`, `.is-focused`, `.is-selected`  
   Archivo: `fenixnova-helpers.css`
-
 
 ---
 
@@ -103,8 +129,6 @@
 - Módulos adicionales compilados en `fenixnova-experimental.css`  
 - Incluye accesibilidad, utilidades extendidas, animaciones Sass convertidas y tema oscuro alternativo  
 - Ideal para proyectos avanzados o variantes personalizadas
-
-
 
 ---
 
