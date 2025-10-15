@@ -157,6 +157,60 @@ FenixNovaCss está dividido en módulos independientes que puedes importar segú
 | `fenixnova.entry.css`       | Punto de entrada para compilar todos los módulos                   |
 | `fenixnova-experimental.css`| Bundle extendido: accesibilidad, animaciones, tema fénix, utilidades |
 
+## 🔠 Jerarquía tipográfica en FenixNovaCss
+
+### 🧱 Títulos (`.text-heading-*`)
+
+| Clase               | Tamaño base | Peso | Uso recomendado                                 |
+|---------------------|-------------|------|--------------------------------------------------|
+| `.text-heading-xxl` | `3rem`      | 700  | Título de portada o banner editorial             |
+| `.text-heading-xl`  | `2.5rem`    | 700  | Encabezado principal de sección                  |
+| `.text-heading-lg`  | `1.75rem`   | 600  | Subsección destacada                             |
+| `.text-heading-md`  | `1.25rem`   | 600  | Título de componente o bloque interno            |
+| `.text-heading-sm`  | `1rem`      | 600  | Encabezado de tarjeta o columna                  |
+| `.text-heading-xs`  | `0.875rem`  | 600  | Etiquetas, metadatos o encabezados menores       |
+
+---
+
+### ✍️ Subtítulos (`.text-subtitle`)
+
+| Clase            | Tamaño base | Peso | Uso recomendado                          |
+|------------------|-------------|------|-------------------------------------------|
+| `.text-subtitle` | `1.5rem`    | 500  | Descripción introductoria o subtítulo     |
+
+---
+
+### 📄 Cuerpo de texto (`.text-body-*`)
+
+| Clase             | Tamaño base | Peso | Uso recomendado                          |
+|-------------------|-------------|------|-------------------------------------------|
+| `.text-body-lg`   | `1.25rem`   | 400  | Texto destacado o párrafo amplio          |
+| `.text-body`      | `1rem`      | 400  | Texto estándar para contenido editorial   |
+| `.text-small`     | `0.875rem`  | 400  | Texto auxiliar, notas, pie de página      |
+
+---
+
+### 🎨 Variantes de color
+
+| Clase           | Color aplicado     | Uso recomendado                          |
+|------------------|--------------------|-------------------------------------------|
+| `.text-muted`    | `#777`             | Texto secundario o desactivado            |
+| `.text-accent`   | `#c0392b`          | Énfasis visual o emocional                |
+| `.text-light`    | `#f9f9f9`          | Sobre fondos oscuros                      |
+| `.text-dark`     | `#111`             | Sobre fondos claros                       |
+
+---
+
+### 📐 Alineación
+
+| Clase           | Propiedad CSS     | Uso recomendado                          |
+|------------------|--------------------|-------------------------------------------|
+| `.text-center`   | `text-align: center` | Centrado horizontal                      |
+| `.text-left`     | `text-align: left`   | Alineado a la izquierda                  |
+| `.text-right`    | `text-align: right`  | Alineado a la derecha                    |
+
+
+
 ## 🎨 Clases disponibles
 
 FenixNovaCss incluye clases semánticas y utilitarias para construir interfaces limpias y escalables:

@@ -203,3 +203,50 @@ body {
 .text-right {
   text-align: right;
 }
+.text-heading-xxl {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-heading);
+  margin-bottom: var(--spacing-lg);
+}
+
+.text-heading-xl {
+  font-size: var(--font-title-xl-size);
+  font-weight: var(--font-title-xl-weight);
+  line-height: var(--font-title-xl-line);
+  color: var(--text-heading);
+  margin-bottom: var(--spacing-md);
+}
+
+.text-heading-lg {
+  font-size: var(--font-title-lg-size);
+  font-weight: var(--font-title-lg-weight);
+  line-height: var(--font-title-lg-line);
+  color: var(--text-heading);
+  margin-bottom: var(--spacing-sm);
+}
+
+.text-heading-md {
+  font-size: var(--font-title-md-size);
+  font-weight: var(--font-title-md-weight);
+  line-height: var(--font-title-md-line);
+  color: var(--text-heading);
+  margin-bottom: var(--spacing-sm);
+}
+
+.text-heading-sm {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-heading);
+  margin-bottom: var(--spacing-sm);
+}
+
+.text-heading-xs {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-heading);
+  margin-bottom: var(--spacing-sm);
+}
