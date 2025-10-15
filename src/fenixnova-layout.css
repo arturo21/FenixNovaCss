@@ -150,3 +150,45 @@
   justify-content: center;
   align-items: center;
 }
+/* 📐 Grid de dos columnas responsivo */
+.layout-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+/* 📐 Grid de 3 columnas responsivo */
+.layout-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+/* 📐 Grid de 4 columnas responsivo */
+.layout-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+/* 📐 Menú de navegación horizontal */
+.menu-horizontal {
+  display: flex;
+  gap: var(--spacing-md);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 🎨 Estilo para logotipo textual */
+.text-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+/* 🧭 Contenedor semántico del menú principal */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
