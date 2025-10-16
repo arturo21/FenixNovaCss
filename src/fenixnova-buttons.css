@@ -28,7 +28,7 @@
 
 .btn.is-secondary {
   background-color: var(--secondary);
-  color: var(--text-main);
+  color: var(--btn-text);
   border-color: var(--secondary-dark);
 }
 
