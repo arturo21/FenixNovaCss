@@ -190,3 +190,30 @@
   --valid-icon: "✔";
   --invalid-icon: "✖";
 }
+:root {
+  /* 🔹 Fondo base */
+  --btn-bg: var(--primary);
+  --btn-bg-hover: #0056b3;
+  --btn-bg-active: #004080;
+  --btn-bg-disabled: var(--gray-300);
+
+  /* 🖋️ Texto */
+  --btn-text: var(--white);
+  --btn-text-hover: var(--white);
+  --btn-text-disabled: var(--gray-500);
+
+  /* 🔸 Bordes */
+  --btn-border: var(--primary-dark);
+  --btn-border-hover: var(--primary);
+  --btn-border-disabled: var(--gray-400);
+
+  /* ✅ Estados */
+  --btn-success-bg: var(--success);
+  --btn-success-text: var(--white);
+
+  --btn-danger-bg: var(--danger);
+  --btn-danger-text: var(--white);
+
+  --btn-muted-bg: var(--gray-500);
+  --btn-muted-text: var(--white);
+}

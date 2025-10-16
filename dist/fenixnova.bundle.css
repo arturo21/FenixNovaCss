@@ -273,6 +273,33 @@ code, pre {
   --valid-icon: "✔";
   --invalid-icon: "✖";
 }
+:root {
+  /* 🔹 Fondo base */
+  --btn-bg: var(--primary);
+  --btn-bg-hover: #0056b3;
+  --btn-bg-active: #004080;
+  --btn-bg-disabled: var(--gray-300);
+
+  /* 🖋️ Texto */
+  --btn-text: var(--white);
+  --btn-text-hover: var(--white);
+  --btn-text-disabled: var(--gray-500);
+
+  /* 🔸 Bordes */
+  --btn-border: var(--primary-dark);
+  --btn-border-hover: var(--primary);
+  --btn-border-disabled: var(--gray-400);
+
+  /* ✅ Estados */
+  --btn-success-bg: var(--success);
+  --btn-success-text: var(--white);
+
+  --btn-danger-bg: var(--danger);
+  --btn-danger-text: var(--white);
+
+  --btn-muted-bg: var(--gray-500);
+  --btn-muted-text: var(--white);
+}
 
 /* 📏 Espaciado */
 .m-0      { margin: 0; }
@@ -844,46 +871,67 @@ code, pre {
   line-height: 1.2;
   user-select: none;
   white-space: nowrap;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: 1px solid var(--btn-border);
 }
 
 /* 🔵 Variantes de color */
 .btn.is-primary {
-  background-color: var(--primary);
-  color: var(--text-hover);
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border-color: var(--btn-border);
 }
 
 .btn.is-secondary {
   background-color: var(--secondary);
   color: var(--text-main);
+  border-color: var(--secondary-dark);
 }
 
 .btn.is-accent {
   background-color: var(--accent);
-  color: var(--text-hover);
+  color: var(--text-inverse);
+  border-color: var(--accent);
 }
 
 .btn.is-muted {
-  background-color: var(--border-color);
-  color: var(--text-muted);
+  background-color: var(--btn-muted-bg);
+  color: var(--btn-muted-text);
+  border-color: var(--gray-600);
+}
+
+.btn.is-success {
+  background-color: var(--btn-success-bg);
+  color: var(--btn-success-text);
+  border-color: var(--success-dark);
+}
+
+.btn.is-danger {
+  background-color: var(--btn-danger-bg);
+  color: var(--btn-danger-text);
+  border-color: var(--danger-dark);
 }
 
 /* 🧭 Outline */
 .btn.is-outline {
   background-color: transparent;
-  border: 2px solid var(--primary);
-  color: var(--primary);
+  border: 2px solid var(--btn-border);
+  color: var(--btn-border);
 }
 
 .btn.is-outline:hover {
-  background-color: var(--primary);
-  color: var(--text-hover);
+  background-color: var(--btn-bg-hover);
+  color: var(--btn-text-hover);
+  border-color: var(--btn-border-hover);
 }
 
 /* 🟢 Estados visuales */
 .btn.is-disabled,
 .btn[disabled] {
-  background-color: var(--border-color);
-  color: var(--text-muted);
+  background-color: var(--btn-bg-disabled);
+  color: var(--btn-text-disabled);
+  border-color: var(--btn-border-disabled);
   cursor: not-allowed;
   opacity: 0.6;
   pointer-events: none;
@@ -898,7 +946,7 @@ code, pre {
 .btn.is-loading .spinner {
   width: 1rem;
   height: 1rem;
-  border: 2px solid var(--text-hover);
+  border: 2px solid var(--btn-text);
   border-top-color: transparent;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
