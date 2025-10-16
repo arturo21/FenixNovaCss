@@ -153,3 +153,40 @@
 .badge.bg-success  { background-color: var(--success); }
 .badge.bg-warning  { background-color: var(--warning); color: #000; }
 .badge.bg-danger   { background-color: var(--danger); }
+
+.hero.hero-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero-image .hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.hero-image .hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.hero.hero-plain {
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}

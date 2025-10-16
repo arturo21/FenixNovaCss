@@ -1,3 +1,78 @@
+/* 🎭 Tema claro (por defecto) */
+:root {
+  --theme-bg: var(--bg-body);
+  --theme-surface: var(--bg-surface);
+  --theme-text: var(--text-main);
+  --theme-muted: var(--text-muted);
+  --theme-border: var(--border-color);
+  --theme-primary: var(--primary);
+  --theme-secondary: var(--secondary);
+  --theme-success: var(--success);
+  --theme-danger: var(--danger);
+  --theme-warning: var(--warning);
+
+  /* 🎨 Colores tipográficos */
+  --text-heading: #1a1a1a;
+  --text-body: #444;
+  --text-muted: #777;
+  --text-accent: #c0392b;
+  --text-light: #f9f9f9;
+  --text-dark: #111;
+
+  /* 📐 Espaciado */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+
+  /* 🔠 Tokens tipográficos */
+  --font-title-xl-size: 2.5rem;
+  --font-title-xl-weight: 700;
+  --font-title-xl-line: 1.2;
+
+  --font-title-lg-size: 1.75rem;
+  --font-title-lg-weight: 600;
+  --font-title-lg-line: 1.3;
+
+  --font-title-md-size: 1.25rem;
+  --font-title-md-weight: 600;
+  --font-title-md-line: 1.4;
+
+  --font-subtitle-size: 1.5rem;
+  --font-subtitle-weight: 500;
+  --font-subtitle-line: 1.5;
+
+  --font-body-lg-size: 1.25rem;
+  --font-body-lg-weight: 400;
+  --font-body-lg-line: 1.6;
+
+  --font-body-size: 1rem;
+  --font-body-weight: 400;
+  --font-body-line: 1.6;
+
+  --font-small-size: 0.875rem;
+  --font-small-weight: 400;
+  --font-small-line: 1.5;
+}
+
+/* 🎭 Tema oscuro activado por atributo */
+[data-theme="dark"],
+.theme-dark {
+  --theme-bg: #121212;
+  --theme-surface: #1e1e1e;
+  --theme-text: #f1f1f1;
+  --theme-muted: #999999;
+  --theme-border: #333333;
+  --theme-primary: #ff6b6b;
+  --theme-secondary: #4ecdc4;
+  --theme-success: #2ec4b6;
+  --theme-danger: #e63946;
+  --theme-warning: #f4a261;
+}
+:root {
+  --hero-padding: 4rem;
+  --hero-bg-opacity: 0.5;
+  --hero-min-height: 60vh;
+}
 /* 🎨 Paleta de colores */
 :root {
   --primary: #e63946;

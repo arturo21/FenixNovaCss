@@ -190,3 +190,40 @@
   display: flex;
   align-items: center;
 }
+
+/* 🔹 Hero base */
+.hero {
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+/* 🔸 Hero con imagen de fondo */
+.hero.has-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 60vh;
+}
+
+/* 🖼️ Imagen como fondo */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+/* 📦 Contenido centrado */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}

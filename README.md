@@ -288,3 +288,4 @@ FenixNovaCss está diseñado para ser extendido fácilmente:
   --fenixnova-size-medium: 1.5rem;
   font-size: var(--fenixnova-size-medium);
 }
+```
