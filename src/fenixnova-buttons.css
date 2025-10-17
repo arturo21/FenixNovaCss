@@ -147,6 +147,8 @@
   align-items: flex-start;
 }
 
+
+
 /* 🧠 Responsive y accesible */
 @media (prefers-reduced-motion: reduce) {
   .btn {

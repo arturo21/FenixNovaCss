@@ -19,6 +19,9 @@
 /* 🧩 Componentes visuales */
 @import './fenixnova-components.css';
 
+/* 🎭 Soporte para slider */
+@import './fenixnova-controls.css';
+
 /* 📝 Formularios estilizados */
 @import './fenixnova-forms.css';
 

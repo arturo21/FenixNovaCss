@@ -190,3 +190,102 @@
   padding-bottom: 4rem;
   text-align: center;
 }
+
+/*TOAST*/
+.nova-toast-container {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  z-index: 1000;
+}
+.nova-toast {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.8em 1.2em;
+  border-radius: 0.4em;
+  box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.4s ease, fadeOut 0.4s ease 3s forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeOut {
+  to { opacity: 0; transform: translateY(20px); }
+}
+
+/*Tooltip*/
+.nova-tooltip {
+  position: relative;
+  display: inline-block;
+}
+.nova-tooltip .nova-tip {
+  visibility: hidden;
+  background-color: var(--color-dark);
+  color: white;
+  text-align: center;
+  padding: 0.4em 0.8em;
+  border-radius: 0.3em;
+  position: absolute;
+  z-index: 10;
+  bottom: 125%; /* arriba del elemento */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.nova-tooltip:hover .nova-tip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*Tabs*/
+.nova-tabs {
+  display: flex;
+  gap: 1em;
+  border-bottom: 2px solid var(--color-border);
+}
+.nova-tab {
+  padding: 0.6em 1em;
+  cursor: pointer;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+.nova-tab.active {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.nova-tab-content {
+  display: none;
+  padding: 1em 0;
+}
+.nova-tab-content.active {
+  display: block;
+}
+
+/*Accordion*/
+.nova-accordion {
+  border: 1px solid var(--color-border);
+  border-radius: 0.4em;
+  overflow: hidden;
+}
+.nova-accordion-header {
+  padding: 0.8em;
+  background-color: var(--color-light);
+  cursor: pointer;
+  font-weight: 600;
+}
+.nova-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 0.8em;
+}
+.nova-accordion.active .nova-accordion-content {
+  max-height: 500px; /* ajustable según contenido */
+  padding: 0.8em;
+}
