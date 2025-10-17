@@ -289,3 +289,76 @@ FenixNovaCss está diseñado para ser extendido fácilmente:
   font-size: var(--fenixnova-size-medium);
 }
 ```
+
+# 🎛️ Ejemplos de uso – Componentes estructurales Fénix Nova CSS
+
+---
+
+## 🔽 Accordion
+
+```html
+<div class="nova-accordion">
+  <div class="nova-accordion-header" onclick="this.parentNode.classList.toggle('active')">
+    ¿Qué es Fénix Nova?
+  </div>
+  <div class="nova-accordion-content">
+    <p>Fénix Nova es un sistema de estilos modular, pedagógico y visualmente claro.</p>
+  </div>
+</div>
+```
+## 🔽 Tabs
+
+```html
+<div class="nova-tabs">
+  <div class="nova-tab active" onclick="activateTab(0)">Ficha</div>
+  <div class="nova-tab" onclick="activateTab(1)">Narrador</div>
+  <div class="nova-tab" onclick="activateTab(2)">Evaluador</div>
+</div>
+
+<div class="nova-tab-content active">
+  <p>Contenido de la ficha pedagógica.</p>
+</div>
+<div class="nova-tab-content">
+  <p>Contenido del narrador visual.</p>
+</div>
+<div class="nova-tab-content">
+  <p>Contenido del evaluador interactivo.</p>
+</div>
+
+<script>
+  function activateTab(index) {
+    document.querySelectorAll('.nova-tab').forEach((tab, i) =>
+      tab.classList.toggle('active', i === index)
+    );
+    document.querySelectorAll('.nova-tab-content').forEach((content, i) =>
+      content.classList.toggle('active', i === index)
+    );
+  }
+</script>
+```
+
+## 💬 Tooltip
+```html
+<div class="nova-tooltip">
+  <button class="nova-btn">¿Qué es esto?</button>
+  <div class="nova-tip">Es un botón interactivo con estilo Nova.</div>
+</div>
+```
+
+## 🔔 Toast
+```html
+<div class="nova-toast-container" id="toastZone"></div>
+
+<script>
+  function showToast(message) {
+    const toast = document.createElement('div');
+    toast.className = 'nova-toast';
+    toast.textContent = message;
+    document.getElementById('toastZone').appendChild(toast);
+    setTimeout(() => toast.remove(), 4000);
+  }
+
+  // Ejemplo de activación
+  showToast("Ficha guardada correctamente.");
+</script>
+```
