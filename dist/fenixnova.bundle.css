@@ -1455,6 +1455,8 @@ code, pre {
   display: inline-block;
   width: 3.2em;
   height: 1.8em;
+  background: var(--bg-primary);
+  border-radius: 15px;
 }
 
 /* 🔘 Input oculto */
@@ -1540,7 +1542,7 @@ code, pre {
   width: 100%;
   padding: 0.5em 0.8em;
   border: 1px solid var(--color-border);
-  border-radius: 0.3em;
+  border-radius: 50px;
   font-size: 1em;
   cursor: pointer;
 }
