@@ -250,9 +250,18 @@
 </div>
 
   <script>
+    /*TABS*/
+    function activateTab(index) {
+      document.querySelectorAll('.nova-tab').forEach((tab, i) =>
+        tab.classList.toggle('active', i === index)
+      );
+      document.querySelectorAll('.nova-tab-content').forEach((content, i) =>
+        content.classList.toggle('active', i === index)
+      );
+    }
     /*TimePicker*/
     const timepicker = document.getElementById("timepicker");
-    const input = timepicker.querySelector("input");
+    input = timepicker.querySelector("input");
     const panel = timepicker.querySelector(".nova-timepanel");
     const hourSelect = timepicker.querySelector("#hourSelect");
     const minuteSelect = timepicker.querySelector("#minuteSelect");
@@ -276,15 +285,6 @@
         panel.style.display = "none";
       }
     });
-    /*TABS*/
-    function activateTab(index) {
-      document.querySelectorAll('.nova-tab').forEach((tab, i) =>
-        tab.classList.toggle('active', i === index)
-      );
-      document.querySelectorAll('.nova-tab-content').forEach((content, i) =>
-        content.classList.toggle('active', i === index)
-      );
-    }
   </script>
   </main>
 
