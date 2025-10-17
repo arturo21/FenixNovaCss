@@ -109,3 +109,183 @@
   width: 100%;
   accent-color: var(--color-primary);
 }
+
+/*PROGRESSBAR*/
+/* 🎚️ Barra de progreso base */
+.nova-progress {
+  width: 100%;
+  background-color: var(--color-border);
+  border-radius: 0.4em;
+  overflow: hidden;
+  height: 1.2em;
+  position: relative;
+}
+
+/* 🔵 Indicador de progreso */
+.nova-progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: var(--color-primary);
+  transition: width 0.4s ease;
+}
+
+/* 🏷️ Etiqueta opcional */
+.nova-progress-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.9em;
+  font-weight: 600;
+  color: white;
+  pointer-events: none;
+}
+
+/*SLIDE*TOGGLE*/
+/* 🔘 Contenedor del slide toggle */
+.nova-slide-toggle {
+  position: relative;
+  display: inline-block;
+  width: 3.2em;
+  height: 1.8em;
+}
+
+/* 🔘 Input oculto */
+.nova-slide-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* 🔘 Fondo del switch */
+.nova-slide-track {
+  position: absolute;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: var(--color-muted);
+  border-radius: 1em;
+  transition: background-color 0.3s ease;
+}
+
+/* 🔘 Botón deslizante */
+.nova-slide-thumb {
+  position: absolute;
+  left: 0.2em;
+  top: 0.2em;
+  width: 1.4em;
+  height: 1.4em;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* 🔘 Estado activo */
+.nova-slide-toggle input:checked + .nova-slide-track {
+  background-color: var(--color-primary);
+}
+.nova-slide-toggle input:checked + .nova-slide-track .nova-slide-thumb {
+  transform: translateX(1.4em);
+}
+/* 🍫 Contenedor del snackbar */
+.nova-snackbar-container {
+  position: fixed;
+  bottom: 1.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+/* 🍫 Snackbar individual */
+.nova-snackbar {
+  background-color: var(--color-dark);
+  color: white;
+  padding: 0.8em 1.2em;
+  border-radius: 0.4em;
+  box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.2);
+  font-size: 0.95em;
+  font-weight: 500;
+  animation: nova-snackbar-in 0.3s ease, nova-snackbar-out 0.3s ease 3.5s forwards;
+}
+
+/* 🍫 Animaciones */
+@keyframes nova-snackbar-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes nova-snackbar-out {
+  to { opacity: 0; transform: translateY(20px); }
+}
+
+/* DATEPICKER */
+/* 📅 Contenedor del datepicker */
+.nova-datepicker {
+  position: relative;
+  display: inline-block;
+  font-family: inherit;
+}
+
+/* 📅 Campo de entrada */
+.nova-datepicker input {
+  width: 100%;
+  padding: 0.5em 0.8em;
+  border: 1px solid var(--color-border);
+  border-radius: 0.3em;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+/* 📅 Calendario emergente */
+.nova-calendar {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: white;
+  border: 1px solid var(--color-border);
+  border-radius: 0.4em;
+  box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.1);
+  padding: 0.6em;
+  z-index: 100;
+  display: none;
+}
+
+/* 📅 Cabecera del calendario */
+.nova-calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4em;
+  font-weight: 600;
+}
+
+/* 📅 Botones de navegación */
+.nova-calendar-nav {
+  cursor: pointer;
+  padding: 0.2em 0.6em;
+  border-radius: 0.3em;
+  background-color: var(--color-light);
+}
+
+/* 📅 Días del calendario */
+.nova-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.3em;
+}
+.nova-calendar-day {
+  text-align: center;
+  padding: 0.4em;
+  border-radius: 0.3em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.nova-calendar-day:hover {
+  background-color: var(--color-primary-light);
+}
+.nova-calendar-day.selected {
+  background-color: var(--color-primary);
+  color: white;
+}

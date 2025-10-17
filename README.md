@@ -362,3 +362,54 @@ FenixNovaCss está diseñado para ser extendido fácilmente:
   showToast("Ficha guardada correctamente.");
 </script>
 ```
+
+## ProgressBar
+```html
+<div class="nova-progress" id="progressContainer">
+  <div class="nova-progress-bar" id="progressBar"></div>
+  <div class="nova-progress-label" id="progressLabel">0%</div>
+</div>
+
+<script>
+  function updateProgress(percent) {
+    const bar = document.getElementById('progressBar');
+    const label = document.getElementById('progressLabel');
+    bar.style.width = percent + '%';
+    label.textContent = percent + '%';
+  }
+
+  // Ejemplo de actualización
+  updateProgress(65); // actualiza a 65%
+</script>
+```
+
+## Slide Toggle
+
+```html
+<label class="nova-slide-toggle">
+  <input type="checkbox" id="toggleDemo" />
+  <div class="nova-slide-track">
+    <div class="nova-slide-thumb"></div>
+  </div>
+</label>
+```
+
+## SnackBar
+
+```html
+<!-- Contenedor global -->
+<div class="nova-snackbar-container" id="snackbarZone"></div>
+
+<script>
+  function showSnackbar(message) {
+    const snackbar = document.createElement('div');
+    snackbar.className = 'nova-snackbar';
+    snackbar.textContent = message;
+    document.getElementById('snackbarZone').appendChild(snackbar);
+    setTimeout(() => snackbar.remove(), 4000);
+  }
+
+  // Ejemplo de activación
+  showSnackbar("Ficha guardada correctamente.");
+</script>
+```
