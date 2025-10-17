@@ -1599,6 +1599,69 @@ code, pre {
   color: white;
 }
 
+/* TIMEPICKER */
+/* ⏰ Contenedor principal */
+.nova-timepicker {
+  position: relative;
+  display: inline-block;
+  font-family: inherit;
+}
+
+/* ⏰ Campo de entrada */
+.nova-timepicker input {
+  width: 100%;
+  padding: 0.5em 0.8em;
+  border: 1px solid var(--color-border);
+  border-radius: 0.3em;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+/* ⏰ Panel emergente */
+.nova-timepanel {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: white;
+  border: 1px solid var(--color-border);
+  border-radius: 0.4em;
+  box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.1);
+  padding: 0.6em;
+  z-index: 100;
+  display: none;
+  width: 12em;
+}
+
+/* ⏰ Selectores */
+.nova-time-select {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5em;
+  margin-bottom: 0.6em;
+}
+.nova-time-select select {
+  width: 100%;
+  padding: 0.4em;
+  border: 1px solid var(--color-border);
+  border-radius: 0.3em;
+  font-size: 1em;
+}
+
+/* ⏰ Botón de confirmación */
+.nova-time-confirm {
+  width: 100%;
+  padding: 0.5em;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 0.3em;
+  cursor: pointer;
+  font-weight: 600;
+}
+.nova-time-confirm:hover {
+  background-color: var(--color-primary-dark);
+}
+
 /* 📝 Grupo de formulario */
 .form-group {
   display: flex;

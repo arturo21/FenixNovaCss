@@ -386,30 +386,139 @@ FenixNovaCss está diseñado para ser extendido fácilmente:
 ## Slide Toggle
 
 ```html
-<label class="nova-slide-toggle">
-  <input type="checkbox" id="toggleDemo" />
-  <div class="nova-slide-track">
-    <div class="nova-slide-thumb"></div>
-  </div>
-</label>
+  <label class="nova-slide-toggle">
+    <input type="checkbox" id="toggleDemo" />
+    <div class="nova-slide-track">
+      <div class="nova-slide-thumb"></div>
+    </div>
+  </label>
 ```
 
 ## SnackBar
 
 ```html
-<!-- Contenedor global -->
-<div class="nova-snackbar-container" id="snackbarZone"></div>
+  <!-- Contenedor global -->
+  <div class="nova-snackbar-container" id="snackbarZone"></div>
 
-<script>
-  function showSnackbar(message) {
-    const snackbar = document.createElement('div');
-    snackbar.className = 'nova-snackbar';
-    snackbar.textContent = message;
-    document.getElementById('snackbarZone').appendChild(snackbar);
-    setTimeout(() => snackbar.remove(), 4000);
-  }
+  <script>
+    function showSnackbar(message) {
+      const snackbar = document.createElement('div');
+      snackbar.className = 'nova-snackbar';
+      snackbar.textContent = message;
+      document.getElementById('snackbarZone').appendChild(snackbar);
+      setTimeout(() => snackbar.remove(), 4000);
+    }
 
-  // Ejemplo de activación
-  showSnackbar("Ficha guardada correctamente.");
-</script>
+    // Ejemplo de activación
+    showSnackbar("Ficha guardada correctamente.");
+  </script>
+```
+
+## DatePicker
+
+```html
+  <!-- Contenedor global -->
+  <div class="nova-datepicker" id="datepicker">
+    <input type="text" readonly placeholder="Selecciona una fecha" />
+    <div class="nova-calendar">
+      <div class="nova-calendar-header">
+        <span class="nova-calendar-nav" id="prevMonth">&lt;</span>
+        <span id="monthLabel">Octubre 2025</span>
+        <span class="nova-calendar-nav" id="nextMonth">&gt;</span>
+      </div>
+      <div class="nova-calendar-grid" id="calendarDays"></div>
+    </div>
+  </div>
+  <script>
+      /***************CALENDAR**************/
+      const datepicker = document.getElementById("datepicker");
+      const input = datepicker.querySelector("input");
+      const calendar = datepicker.querySelector(".nova-calendar");
+      const calendarDays = datepicker.querySelector("#calendarDays");
+      const monthLabel = datepicker.querySelector("#monthLabel");
+
+      let currentDate = new Date();
+
+      function renderCalendar(date) {
+        const year = date.getFullYear();
+        const month = date.getMonth();
+        const firstDay = new Date(year, month, 1).getDay();
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        calendarDays.innerHTML = "";
+        for (let i = 0; i < firstDay; i++) {
+          calendarDays.innerHTML += `<div></div>`;
+        }
+
+        for (let d = 1; d <= daysInMonth; d++) {
+          const dayEl = document.createElement("div");
+          dayEl.className = "nova-calendar-day";
+          dayEl.textContent = d;
+          dayEl.onclick = () => {
+            input.value = `${d}/${month + 1}/${year}`;
+            calendar.style.display = "none";
+            calendarDays.querySelectorAll(".selected").forEach(el => el.classList.remove("selected"));
+            dayEl.classList.add("selected");
+          };
+          calendarDays.appendChild(dayEl);
+        }
+
+        const monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+                            "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        monthLabel.textContent = `${monthNames[month]} ${year}`;
+      }
+
+      datepicker.querySelector("#prevMonth").onclick = () => {
+        currentDate.setMonth(currentDate.getMonth() - 1);
+        renderCalendar(currentDate);
+      };
+      datepicker.querySelector("#nextMonth").onclick = () => {
+        currentDate.setMonth(currentDate.getMonth() + 1);
+        renderCalendar(currentDate);
+      };
+
+      input.onclick = () => {
+        calendar.style.display = "block";
+      };
+
+      document.addEventListener("click", e => {
+        if (!datepicker.contains(e.target)) {
+          calendar.style.display = "none";
+        }
+      });
+
+      renderCalendar(currentDate);
+      /*********************************************************/
+  </script>
+```
+
+## Tabs
+
+```html
+  <div class="nova-tabs">
+    <div class="nova-tab active" onclick="activateTab(0)">Ficha</div>
+    <div class="nova-tab" onclick="activateTab(1)">Narrador</div>
+    <div class="nova-tab" onclick="activateTab(2)">Evaluador</div>
+  </div>
+
+  <div class="nova-tab-content active">
+    <p>Contenido de la ficha pedagógica.</p>
+  </div>
+  <div class="nova-tab-content">
+    <p>Contenido del narrador visual.</p>
+  </div>
+  <div class="nova-tab-content">
+    <p>Contenido del evaluador interactivo.</p>
+  </div>
+  <script>
+    /*TABS*/
+    function activateTab(index) {
+      document.querySelectorAll('.nova-tab').forEach((tab, i) =>
+        tab.classList.toggle('active', i === index)
+      );
+      document.querySelectorAll('.nova-tab-content').forEach((content, i) =>
+        content.classList.toggle('active', i === index)
+      );
+    }
+  </script>
 ```

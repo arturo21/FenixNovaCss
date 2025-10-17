@@ -189,6 +189,103 @@
     <div class="nova-progress-bar bg-blue" id="progressBar"></div>
     <div class="nova-progress-label text-black" id="progressLabel">0%</div>
   </div>
+
+  <div class="nova-tabs">
+    <div class="nova-tab active" onclick="activateTab(0)">Ficha</div>
+    <div class="nova-tab" onclick="activateTab(1)">Narrador</div>
+    <div class="nova-tab" onclick="activateTab(2)">Evaluador</div>
+  </div>
+
+  <div class="nova-tab-content active">
+    <p>Contenido de la ficha pedagógica.</p>
+  </div>
+  <div class="nova-tab-content">
+    <p>Contenido del narrador visual.</p>
+  </div>
+  <div class="nova-tab-content">
+    <p>Contenido del evaluador interactivo.</p>
+  </div>
+
+<div class="nova-timepicker" id="timepicker">
+  <input type="text" readonly placeholder="Selecciona hora" />
+  <div class="nova-timepanel">
+    <div class="nova-time-select">
+      <select id="hourSelect">
+        <!-- Horas 1–12 -->
+        <option value="1">01</option>
+        <option value="2">02</option>
+        <option value="3">03</option>
+        <option value="4">04</option>
+        <option value="5">05</option>
+        <option value="6">06</option>
+        <option value="7">07</option>
+        <option value="8">08</option>
+        <option value="9">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+      <select id="minuteSelect">
+        <!-- Minutos 00–55 -->
+        <option value="00">00</option>
+        <option value="05">05</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+        <option value="25">25</option>
+        <option value="30">30</option>
+        <option value="35">35</option>
+        <option value="40">40</option>
+        <option value="45">45</option>
+        <option value="50">50</option>
+        <option value="55">55</option>
+      </select>
+      <select id="ampmSelect">
+        <option value="AM">AM</option>
+        <option value="PM">PM</option>
+      </select>
+    </div>
+    <button class="nova-time-confirm">Confirmar</button>
+  </div>
+</div>
+
+  <script>
+    /*TimePicker*/
+    const timepicker = document.getElementById("timepicker");
+    const input = timepicker.querySelector("input");
+    const panel = timepicker.querySelector(".nova-timepanel");
+    const hourSelect = timepicker.querySelector("#hourSelect");
+    const minuteSelect = timepicker.querySelector("#minuteSelect");
+    const ampmSelect = timepicker.querySelector("#ampmSelect");
+    const confirmBtn = timepicker.querySelector(".nova-time-confirm");
+
+    input.onclick = () => {
+      panel.style.display = "block";
+    };
+
+    confirmBtn.onclick = () => {
+      const hour = hourSelect.value.padStart(2, '0');
+      const minute = minuteSelect.value.padStart(2, '0');
+      const ampm = ampmSelect.value;
+      input.value = `${hour}:${minute} ${ampm}`;
+      panel.style.display = "none";
+    };
+
+    document.addEventListener("click", e => {
+      if (!timepicker.contains(e.target)) {
+        panel.style.display = "none";
+      }
+    });
+    /*TABS*/
+    function activateTab(index) {
+      document.querySelectorAll('.nova-tab').forEach((tab, i) =>
+        tab.classList.toggle('active', i === index)
+      );
+      document.querySelectorAll('.nova-tab-content').forEach((content, i) =>
+        content.classList.toggle('active', i === index)
+      );
+    }
+  </script>
   </main>
 
   <!-- 🧾 Footer cálido -->
