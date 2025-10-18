@@ -1718,6 +1718,46 @@ code, pre {
   background-color: var(--color-primary-dark);
 }
 
+/*Tree*/
+.nova-tree {
+  list-style: none;
+  padding-left: 0;
+  font-family: inherit;
+}
+
+.nova-tree-node > .nova-tree-toggle {
+  cursor: pointer;
+  padding: 0.4em 0.6em;
+  font-weight: 600;
+  background-color: var(--color-light);
+  border-radius: 0.3em;
+  margin-bottom: 0.2em;
+  transition: background-color 0.3s ease;
+}
+
+.nova-tree-node > .nova-tree-toggle:hover {
+  background-color: var(--color-primary-light);
+}
+
+.nova-tree-children {
+  list-style: none;
+  padding-left: 1.2em;
+  margin-top: 0.4em;
+  display: none;
+}
+
+.nova-tree-node.open > .nova-tree-children {
+  display: block;
+}
+
+.nova-tree-leaf {
+  padding: 0.3em 0.6em;
+  margin: 0.2em 0;
+  border-left: 2px solid var(--color-border);
+  font-size: 0.95em;
+  color: var(--color-dark);
+}
+
 /* 📝 Grupo de formulario */
 .form-group {
   display: flex;

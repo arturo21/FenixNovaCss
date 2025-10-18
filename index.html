@@ -273,6 +273,27 @@
     <button class="nova-time-confirm">Confirmar</button>
   </div>
 </div>
+<ul class="nova-tree">
+  <li class="nova-tree-node">
+    <div class="nova-tree-toggle" onclick="toggleNode(this)">📁 Categoría 1</div>
+    <ul class="nova-tree-children">
+      <li class="nova-tree-node">
+        <div class="nova-tree-toggle" onclick="toggleNode(this)">📁 Subcategoría 1.1</div>
+        <ul class="nova-tree-children">
+          <li class="nova-tree-leaf">📄 Documento 1.1.1</li>
+          <li class="nova-tree-leaf">📄 Documento 1.1.2</li>
+        </ul>
+      </li>
+      <li class="nova-tree-leaf">📄 Documento 1.2</li>
+    </ul>
+  </li>
+  <li class="nova-tree-node">
+    <div class="nova-tree-toggle" onclick="toggleNode(this)">📁 Categoría 2</div>
+    <ul class="nova-tree-children">
+      <li class="nova-tree-leaf">📄 Documento 2.1</li>
+    </ul>
+  </li>
+</ul>
 
   <script>
     /*TABS*/
@@ -436,6 +457,11 @@
     }
 
     updateStepper();
+
+    function toggleNode(el) {
+      const parent = el.parentNode;
+      parent.classList.toggle("open");
+    }
 
 </script>
 </body>
