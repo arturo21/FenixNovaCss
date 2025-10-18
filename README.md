@@ -522,3 +522,71 @@ FenixNovaCss está diseñado para ser extendido fácilmente:
     }
   </script>
 ```
+
+# Stepper
+```html
+<div class="nova-stepper" id="novaStepper">
+  <div class="nova-stepper-header">
+    <div class="nova-step active">Paso 1</div>
+    <div class="nova-step">Paso 2</div>
+    <div class="nova-step">Paso 3</div>
+  </div>
+
+  <div class="nova-stepper-content">
+    <div class="nova-step-panel active">
+      <p>Contenido del paso 1.</p>
+      <button onclick="nextStep()">Siguiente</button>
+    </div>
+    <div class="nova-step-panel">
+      <p>Contenido del paso 2.</p>
+      <button onclick="prevStep()">Anterior</button>
+      <button onclick="nextStep()">Siguiente</button>
+    </div>
+    <div class="nova-step-panel">
+      <p>Contenido del paso 3.</p>
+      <button onclick="prevStep()">Anterior</button>
+      <button onclick="finishStepper()">Finalizar</button>
+    </div>
+  </div>
+</div>
+<script>
+  let currentStep = 0;
+
+function updateStepper() {
+  const steps = document.querySelectorAll('.nova-step');
+  const panels = document.querySelectorAll('.nova-step-panel');
+
+  steps.forEach((step, i) => {
+    step.classList.toggle('active', i === currentStep);
+  });
+
+  panels.forEach((panel, i) => {
+    panel.classList.toggle('active', i === currentStep);
+  });
+}
+
+function nextStep() {
+  const totalSteps = document.querySelectorAll('.nova-step').length;
+  if (currentStep < totalSteps - 1) {
+    currentStep++;
+    updateStepper();
+  }
+}
+
+function prevStep() {
+  if (currentStep > 0) {
+    currentStep--;
+    updateStepper();
+  }
+}
+
+function finishStepper() {
+  alert("Proceso completado.");
+  currentStep = 0;
+  updateStepper();
+}
+
+updateStepper();
+
+</script>
+```

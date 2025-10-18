@@ -355,3 +355,58 @@
   background-color: var(--color-primary-dark);
   color: var(--color-primary);
 }
+/*STEPPER*/
+
+.nova-stepper {
+  font-family: inherit;
+  max-width: 600px;
+  margin: 2em auto;
+}
+
+.nova-stepper-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.nova-step {
+  flex: 1;
+  text-align: center;
+  padding: 0.6em;
+  border-bottom: 2px solid var(--color-border);
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.nova-step.active {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.nova-stepper-content {
+  border: 1px solid var(--color-border);
+  border-radius: 0.4em;
+  padding: 1em;
+  background-color: var(--color-light);
+}
+
+.nova-step-panel {
+  display: none;
+}
+.nova-step-panel.active {
+  display: block;
+}
+
+.nova-stepper-content button {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+.nova-stepper-content button:hover {
+  background-color: var(--color-primary-dark);
+}
