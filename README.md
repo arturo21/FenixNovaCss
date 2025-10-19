@@ -590,3 +590,52 @@ updateStepper();
 
 </script>
 ```
+
+## ScrollSpy 
+
+### Estructura Base
+```html
+<div class="nova-scrollspy-container">
+  <nav class="nova-scrollspy-nav">
+    <a href="#section1" class="nova-scrollspy-link active">Introducción</a>
+    <a href="#section2" class="nova-scrollspy-link">Contenido</a>
+    <a href="#section3" class="nova-scrollspy-link">Ejemplos</a>
+    <a href="#section4" class="nova-scrollspy-link">Conclusión</a>
+  </nav>
+
+  <div class="nova-scrollspy-content">
+    <section id="section1" class="nova-scrollspy-section">...</section>
+    <section id="section2" class="nova-scrollspy-section">...</section>
+    <section id="section3" class="nova-scrollspy-section">...</section>
+    <section id="section4" class="nova-scrollspy-section">...</section>
+  </div>
+</div>
+```
+
+### Implementaciòn Js 
+```js 
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".nova-scrollspy-section");
+  const links = document.querySelectorAll(".nova-scrollspy-link");
+
+  function activateLink(id) {
+    links.forEach(link => {
+      link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+    });
+  }
+
+  function onScroll() {
+    let current = "";
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 100 && rect.bottom >= 100) {
+        current = section.id;
+      }
+    });
+    if (current) activateLink(current);
+  }
+
+  document.addEventListener("scroll", onScroll, { passive: true });
+  onScroll(); // inicial
+});
+```
