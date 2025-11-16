@@ -567,64 +567,6 @@ code, pre {
 .col-11     { grid-column: span 11; }
 .col-12     { grid-column: span 12; }
 
-/* 📏 Espaciado entre columnas y filas */
-.grid-gap-xs { gap: var(--spacing-xs); }
-.grid-gap-sm { gap: var(--spacing-sm); }
-.grid-gap-md { gap: var(--spacing-md); }
-.grid-gap-lg { gap: var(--spacing-lg); }
-.grid-gap-xl { gap: var(--spacing-xl); }
-
-/* 🎯 Alineación horizontal y vertical */
-.grid-justify-start   { justify-content: start; }
-.grid-justify-center  { justify-content: center; }
-.grid-justify-end     { justify-content: end; }
-.grid-justify-between { justify-content: space-between; }
-
-.grid-align-start     { align-items: start; }
-.grid-align-center    { align-items: center; }
-.grid-align-end       { align-items: end; }
-
-/* 🔄 Orden y autoajuste */
-.col-order-1  { order: 1; }
-.col-order-2  { order: 2; }
-.col-order-3  { order: 3; }
-.col-grow     { flex-grow: 1; }
-.col-shrink   { flex-shrink: 1; }
-
-/* 📐 Columnas automáticas */
-.grid-auto-cols-min   { grid-auto-columns: min-content; }
-.grid-auto-cols-max   { grid-auto-columns: max-content; }
-.grid-auto-cols-fr    { grid-auto-columns: 1fr; }
-
-/* 📐 Filas automáticas */
-.grid-auto-rows-min   { grid-auto-rows: min-content; }
-.grid-auto-rows-max   { grid-auto-rows: max-content; }
-.grid-auto-rows-fr    { grid-auto-rows: 1fr; }
-
-/* 📱 Responsive helpers */
-@media (min-width: 576px) {
-  .col-sm-6  { grid-column: span 6; }
-  .col-sm-12 { grid-column: span 12; }
-}
-
-@media (min-width: 768px) {
-  .grid-md-cols-2  { grid-template-columns: repeat(2, 1fr); }
-  .grid-md-cols-3  { grid-template-columns: repeat(3, 1fr); }
-  .grid-md-cols-4  { grid-template-columns: repeat(4, 1fr); }
-  .col-md-4        { grid-column: span 4; }
-  .col-md-6        { grid-column: span 6; }
-  .col-md-12       { grid-column: span 12; }
-}
-
-@media (min-width: 1024px) {
-  .grid-lg-cols-3  { grid-template-columns: repeat(3, 1fr); }
-  .grid-lg-cols-6  { grid-template-columns: repeat(6, 1fr); }
-  .grid-lg-cols-12 { grid-template-columns: repeat(12, 1fr); }
-  .col-lg-3        { grid-column: span 3; }
-  .col-lg-6        { grid-column: span 6; }
-  .col-lg-12       { grid-column: span 12; }
-}
-
 /* 📱 Apilamiento automático en pantallas pequeñas */
 @media (max-width: 767px) {
   .grid {
@@ -640,6 +582,32 @@ code, pre {
   }
 }
 
+/* 📱 Reajuste progresivo en tablet y escritorio */
+@media (min-width: 768px) {
+  .grid-md-cols-2  { grid-template-columns: repeat(2, 1fr); }
+  .grid-md-cols-3  { grid-template-columns: repeat(3, 1fr); }
+  .grid-md-cols-4  { grid-template-columns: repeat(4, 1fr); }
+  .grid-md-cols-6  { grid-template-columns: repeat(6, 1fr); }
+  .grid-md-cols-12 { grid-template-columns: repeat(12, 1fr); }
+
+  .col-md-1  { grid-column: span 1; }
+  .col-md-2  { grid-column: span 2; }
+  .col-md-3  { grid-column: span 3; }
+  .col-md-4  { grid-column: span 4; }
+  .col-md-6  { grid-column: span 6; }
+  .col-md-12 { grid-column: span 12; }
+}
+
+@media (min-width: 1024px) {
+  .grid-lg-cols-3  { grid-template-columns: repeat(3, 1fr); }
+  .grid-lg-cols-6  { grid-template-columns: repeat(6, 1fr); }
+  .grid-lg-cols-12 { grid-template-columns: repeat(12, 1fr); }
+
+  .col-lg-3  { grid-column: span 3; }
+  .col-lg-6  { grid-column: span 6; }
+  .col-lg-12 { grid-column: span 12; }
+}
+
 /* 🧱 Contenedor principal */
 .container {
   max-width: var(--container-max-width);
@@ -648,74 +616,6 @@ code, pre {
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
   width: 100%;
-}
-
-/* 🧱 Sección */
-.section {
-  padding-top: var(--spacing-xl);
-  padding-bottom: var(--spacing-xl);
-}
-
-/* 🧭 Encabezado principal */
-.header {
-  width: 100%;
-  padding-top: var(--spacing-md);
-  padding-bottom: var(--spacing-md);
-  background-color: var(--bg-surface);
-  color: var(--text-heading);
-  border-bottom: 1px solid var(--border-color);
-}
-
-/* 📐 Contenido interno del header */
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: var(--container-max-width);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--container-padding);
-  padding-right: var(--container-padding);
-}
-
-/* 🎨 Variantes temáticas */
-.header-dark {
-  background-color: var(--bg-surface-dark);
-  color: var(--text-heading-dark);
-  border-bottom: 1px solid var(--border-color-dark);
-}
-
-.header-light {
-  background-color: var(--bg-surface);
-  color: var(--text-heading);
-}
-
-.header-transparent {
-  background-color: transparent;
-  border-bottom: none;
-}
-
-.header-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-.header-sticky {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-
-/* 📱 Responsividad */
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--spacing-sm);
-  }
 }
 
 /* 📐 Columnas flexibles mejoradas */
@@ -730,7 +630,7 @@ code, pre {
   flex: 1 1 0;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  min-width: 200px; /* Evita que se achiquen demasiado */
+  min-width: 200px;
 }
 
 .col-1  { flex: 0 0 8.333%;  max-width: 8.333%; }
@@ -746,69 +646,7 @@ code, pre {
 .col-11 { flex: 0 0 91.666%; max-width: 91.666%; }
 .col-12 { flex: 0 0 100%;    max-width: 100%; }
 
-/* 📱 Apilamiento automático en pantallas pequeñas */
-@media (max-width: 768px) {
-  .row {
-    flex-direction: column;
-  }
-
-  .col,
-  .col-1, .col-2, .col-3, .col-4, .col-5,
-  .col-6, .col-7, .col-8, .col-9, .col-10,
-  .col-11, .col-12 {
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
-  }
-}
-
-/* 📐 Alineación vertical y horizontal */
-.align-start    { align-items: flex-start; }
-.align-center   { align-items: center; }
-.align-end      { align-items: flex-end; }
-
-.justify-start  { justify-content: flex-start; }
-.justify-center { justify-content: center; }
-.justify-end    { justify-content: flex-end; }
-.justify-between{ justify-content: space-between; }
-.justify-around { justify-content: space-around; }
-
-/* 📐 Dirección de flujo */
-.flex-row    { flex-direction: row; }
-.flex-column { flex-direction: column; }
-
-/* 📐 Helpers de altura y anchura */
-.w-100   { width: 100%; }
-.h-100   { height: 100%; }
-.min-h-screen { min-height: 100vh; }
-.max-w-full   { max-width: 100%; }
-.max-h-full   { max-height: 100%; }
-
-/* 📐 Layout de pantalla completa */
-.fullscreen {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* 📐 Layout centrado verticalmente */
-.v-center {
-  display: flex;
-  align-items: center;
-}
-
-/* 📐 Layout centrado horizontalmente */
-.h-center {
-  display: flex;
-  justify-content: center;
-}
-
-/* 📐 Layout centrado en ambas direcciones */
-.centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/* 📐 Grid de dos columnas responsivo */
+/* 📐 Grid de columnas responsivo */
 .layout-grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -827,63 +665,25 @@ code, pre {
   gap: var(--spacing-lg);
 }
 
-/* 📐 Menú de navegación horizontal */
-.menu-horizontal {
-  display: flex;
-  gap: var(--spacing-md);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+/* 📱 Apilamiento automático en pantallas pequeñas */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
 
-/* 🎨 Estilo para logotipo textual */
-.text-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  letter-spacing: 0.05em;
-}
+  .col,
+  .col-1, .col-2, .col-3, .col-4, .col-5,
+  .col-6, .col-7, .col-8, .col-9, .col-10,
+  .col-11, .col-12 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
 
-/* 🧭 Contenedor semántico del menú principal */
-.main-nav {
-  display: flex;
-  align-items: center;
-}
-
-/* 🔹 Hero base */
-.hero {
-  position: relative;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  text-align: center;
-}
-
-/* 🔸 Hero con imagen de fondo */
-.hero.has-bg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  min-height: 60vh;
-}
-
-/* 🖼️ Imagen como fondo */
-.hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 0.5;
-}
-
-/* 📦 Contenido centrado */
-.hero-content {
-  position: relative;
-  z-index: 1;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  .layout-grid-2,
+  .layout-grid-3,
+  .layout-grid-4 {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 /* 🎯 Botón base */
