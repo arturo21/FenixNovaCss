@@ -76,7 +76,7 @@
   }
 }
 
-/* 📐 Columnas flexibles */
+/* 📐 Columnas flexibles mejoradas */
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -88,6 +88,7 @@
   flex: 1 1 0;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  min-width: 200px; /* Evita que se achiquen demasiado */
 }
 
 .col-1  { flex: 0 0 8.333%;  max-width: 8.333%; }
@@ -102,6 +103,21 @@
 .col-10 { flex: 0 0 83.333%; max-width: 83.333%; }
 .col-11 { flex: 0 0 91.666%; max-width: 91.666%; }
 .col-12 { flex: 0 0 100%;    max-width: 100%; }
+
+/* 📱 Apilamiento automático en pantallas pequeñas */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .col,
+  .col-1, .col-2, .col-3, .col-4, .col-5,
+  .col-6, .col-7, .col-8, .col-9, .col-10,
+  .col-11, .col-12 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
 
 /* 📐 Alineación vertical y horizontal */
 .align-start    { align-items: flex-start; }
