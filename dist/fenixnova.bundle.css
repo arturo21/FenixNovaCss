@@ -543,6 +543,59 @@ code, pre {
 .max-w-screen{ max-width: 100vw; }
 .max-h-screen{ max-height: 100vh; }
 
+/* ==========================================================================
+   NUEVAS UTILIDADES DE FLEXBOX Y ESPACIADO (GAP)
+   ========================================================================== */
+
+/* Alineaciones distribuidas de Flexbox */
+.justify-between { justify-content: space-between !important; }
+.justify-around  { justify-content: space-around !important; }
+.justify-evenly  { justify-content: space-evenly !important; }
+
+.align-self-center { align-self: center !important; }
+.flex-1            { flex: 1 1 0% !important; }
+.flex-shrink-0     { flex-shrink: 0 !important; }
+
+/* Control de brechas (Gap) mediante Tokens de diseño */
+.gap-sm { gap: var(--spacing-sm, 0.5rem) !important; }
+.gap-md { gap: var(--spacing-md, 1rem) !important; }
+.gap-lg { gap: var(--spacing-lg, 1.5rem) !important; }
+
+/* ==========================================================================
+   CONTROL TIPOGRÁFICO Y TRUNCADO MULTILÍNEA
+   ========================================================================== */
+
+/* Evitar saltos de línea y equilibrar encabezados */
+.text-nowrap  { white-space: nowrap !important; }
+.text-balance { text-wrap: balance !important; }
+
+/* Recorte de texto a varias líneas (Line Clamp) */
+.text-clamp-2,
+.text-clamp-3 {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+.text-clamp-2 { -webkit-line-clamp: 2; }
+.text-clamp-3 { -webkit-line-clamp: 3; }
+
+/* ==========================================================================
+   AJUSTE DE IMÁGENES Y POSICIONAMIENTO
+   ========================================================================== */
+
+/* Escalado de imágenes dentro de contenedores con ratio */
+.object-cover   { object-fit: cover !important; }
+.object-contain { object-fit: contain !important; }
+
+/* Posicionamiento Adhesivo */
+.is-sticky,
+.sticky-top {
+  position: sticky !important;
+  top: 0;
+  z-index: 100;
+}
+
 /* 📐 Contenedor de grilla */
 .grid {
   display: grid;
@@ -606,6 +659,23 @@ code, pre {
   .col-lg-3  { grid-column: span 3; }
   .col-lg-6  { grid-column: span 6; }
   .col-lg-12 { grid-column: span 12; }
+}
+/* ==========================================================================
+   GRID NATIVO MINIMALISTA
+   ========================================================================== */
+
+.d-grid {
+  display: grid !important;
+}
+
+/* Plantillas de columnas fijas */
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+/* Grid auto-ajustable (Galerías responsivas sin media queries) */
+.grid-auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 /* 🧱 Contenedor principal */
@@ -2154,6 +2224,39 @@ code, pre {
   display: block;
 }
 
+/* ==========================================================================
+   ACCESIBILIDAD Y LECTORES DE PANTALLA (A11Y)
+   ========================================================================== */
+
+/* Ocultamiento visual exclusivo para Lectores de Pantalla */
+.sr-only,
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Indicador de foco visible para navegación por teclado */
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-primary, #1e40af) !important;
+  outline-offset: 2px !important;
+}
+
+/* Desactivación de animaciones para usuarios con sensibilidad al movimiento */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 /* 🧩 Mixin: centrado absoluto */
 @mixin center-absolute {
   position: absolute;

@@ -62,3 +62,20 @@
   .col-lg-6  { grid-column: span 6; }
   .col-lg-12 { grid-column: span 12; }
 }
+/* ==========================================================================
+   GRID NATIVO MINIMALISTA
+   ========================================================================== */
+
+.d-grid {
+  display: grid !important;
+}
+
+/* Plantillas de columnas fijas */
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+/* Grid auto-ajustable (Galerías responsivas sin media queries) */
+.grid-auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
